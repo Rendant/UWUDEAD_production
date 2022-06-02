@@ -10,12 +10,10 @@ class Goods(models.Model):
     cost = models.DecimalField(max_digits=6, decimal_places=2,
                                verbose_name='Цена')
     collection = models.ManyToManyField('Collections', verbose_name='Коллекция')
-    sizes = models.OneToOneField('Sizes', on_delete=models.PROTECT, blank=True,
-                                 verbose_name='Размеры')
-    size_s = models.PositiveSmallIntegerField(editable=True, blank=True, verbose_name='Размер S')
-    size_m = models.PositiveSmallIntegerField(editable=True, blank=True, verbose_name='Размер M')
-    size_l = models.PositiveSmallIntegerField(editable=True, blank=True, verbose_name='Размер L')
-    size_xl = models.PositiveSmallIntegerField(editable=True, blank=True, verbose_name='Размер XL')
+    size_s = models.PositiveSmallIntegerField(editable=True, blank=True, null=True,  verbose_name='Размер S')
+    size_m = models.PositiveSmallIntegerField(editable=True, blank=True, null=True,verbose_name='Размер M')
+    size_l = models.PositiveSmallIntegerField(editable=True, blank=True, null=True, verbose_name='Размер L')
+    size_xl = models.PositiveSmallIntegerField(editable=True, blank=True, null=True, verbose_name='Размер XL')
 
     def __str__(self):
         return self.name

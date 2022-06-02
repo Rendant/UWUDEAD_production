@@ -14,7 +14,7 @@ class GoodsAdmin(admin.ModelAdmin):
 
 
 class CollectionsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'slug')
+    list_display = ('id', 'name')
     list_display_links = ('id', 'name')
     search_fields = ('name',)
     list_filter = ('name',)
