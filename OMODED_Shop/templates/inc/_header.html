@@ -14,11 +14,24 @@
                     </div>
                     </a>
                     <ul class="site-dropDownMenuCollections">
-                        {% for collection in collections %}
                         <li>
-                            <a href="{{ collection.get_absolute_url }}" class="site-nav__link">{{ collection.name }}</a><br>
+                            <a href="/collections/omori" class="site-nav__link">OMORI</a><br>
                         </li>
-                        {% endfor %}
+                        <li>
+                            <a href="/collections/hololive-en" class="site-nav__link">HOLOLIVE EN</a>
+                        </li>
+                        <li>
+                            <a href="/collections/bang-dream" class="site-nav__link">BANG DREAM!</a>
+                        </li>
+                        <li>
+                            <a href="/collections/doki-doki-literature-club" class="site-nav__link">DDLC!</a>
+                        </li>
+                        <li>
+                            <a href="/collections/hatsune-miku" class="site-nav__link">HATSUNE MIKU</a>
+                        </li>
+                        <li>
+                            <a href="/collections/original" class="site-nav__link">ORIGINAL</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
