@@ -13,10 +13,23 @@ li {
 }
 p {
     position: relative;
+    justify-content: center;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 25px;
+    display: block;
 }
+.header-links {
+    position: relative;
+    bottom: 50px;
+    left: 400px;
+    justify-content: end;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 p1 {
     position: relative;
     text-align: right;
@@ -133,7 +146,7 @@ p1 {
 
     position: absolute;
     z-index: 4;
-    left: 55%;
+    left: 45%;
     top: 25%;
     width: 150px;
     padding: 0;
