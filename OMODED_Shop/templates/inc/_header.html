@@ -1,5 +1,4 @@
 {% load static %}
-{% load header_tags %}
 <header class="header">
         <nav>
             <p><img src="{% static 'img/logo.jpg' %}" width="72" height="69"></p>
@@ -15,7 +14,6 @@
                     </div>
                     </a>
                     <ul class="site-dropDownMenuCollections">
-                        {% get_collections as collections %}
                         {% for collection in collections %}
                         <li>
                             <a href="{{ collection.get_absolute_url }}" class="site-nav__link">{{ collection.name }}</a><br>
