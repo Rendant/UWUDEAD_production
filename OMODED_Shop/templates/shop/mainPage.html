@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UWUDEAD</title>
+    <link rel="stylesheet" href="{% static 'css/mainPage.css' %}">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <p><img src="{% static 'img/logo.jpg' %}" width="72" height="69"></p>
+            <ul class="nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/collections">
+                    <div>
+                        <span>COLLECTIONS</span>
+                        <span class="icon-dropdown">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5" viewBox="5 -7 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </div>
+                    </a>
+                    <ul class="site-dropDownMenuCollections">
+                        <li>
+                            <a href="/collections/omori" class="site-nav__link">OMORI</a><br>
+                        </li>
+                        <li>
+                            <a href="/collections/hololive-en" class="site-nav__link">HOLOLIVE EN</a>
+                        </li>
+                        <li>
+                            <a href="/collections/bang-dream" class="site-nav__link">BANG DREAM!</a>
+                        </li>
+                        <li>
+                            <a href="/collections/doki-doki-literature-club" class="site-nav__link">DDLC!</a>
+                        </li>
+                        <li>
+                            <a href="/collections/hatsune-miku" class="site-nav__link">HATSUNE MIKU</a>
+                        </li>
+                        <li>
+                            <a href="/collections/original" class="site-nav__link">ORIGINAL</a>
+                        </li>
+                        <li>
+                            <a href="https://www.pokemoncenter.com/omocat" class="site-nav__link">POKÉMON© CENTER</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/apparel">
+                        <div>
+                            <span>APPAREL</span>
+                            <span class="icon-dropdown">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5" viewBox="5 -7 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                        </div>
+                    </a>
+                    <ul class="site-dropDownMenuApparel">
+                        <li>
+                            <a href="/collections/shirts" class="site-nav__link">Shirts</a>
+                        </li>
+                        <li>
+                            <a href="/collections/sweaters-1" class="site-nav__link">Sweaters</a>
+                        </li>
+                        <li>
+                            <a href="/collections/jackets" class="site-nav__link">Jackets &amp; Hoodies</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/accessories">
+                        <div>
+                            <span>ACCESSORIES</span>
+                            <span class="icon-dropdown">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5" viewBox="5 -7 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                        </div>
+                    </a>
+                    <ul class="site-dropDownMenuAccessories">
+                        <li>
+                            <a href="/collections/plushies" class="site-nav__link">Plushies</a>
+                        </li>
+                        <li>
+                            <a href="/collections/pins" class="site-nav__link">Pins</a>
+                        </li>
+                        <li>
+                            <a href="/collections/hats" class="site-nav__link">Hats</a>
+                        </li>
+                        <li>
+                            <a href="/collections/stickers" class="site-nav__link">Stickers</a>
+                        </li>
+                        <li>
+                            <a href="/collections/skate-decks" class="site-nav__link">Skate Decks</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/printed_matter">
+                        <div>
+                            <span>PRINTED MATTER</span>
+                            <span class="icon-dropdown">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5" viewBox="5 -7 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                        </div>
+                    </a>
+                    <ul class="site-dropDownMenuPrintedMatter">
+                        <li>
+                            <a href="/collections/books" class="site-nav__link">Books &amp; Booklets</a>
+                        </li>
+                        <li>
+                            <a href="/collections/posters-prints" class="site-nav__link">Posters &amp; Prints</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/showcase">
+                        <div>
+                            <span>SHOWCASE</span>
+                            <span class="icon-dropdown">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5" viewBox="5 -7 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                        </div>
+                    </a>
+                    <ul class="site-dropDownMenuShowcase">
+                        <li>
+                            <a href="/pages/conventions-2022" class="site-nav__link">CONVENTIONS 2022</a>
+                        </li>
+                        <li>
+                            <a href="/pages/collaborations" class="site-nav__link">COLLABORATIONS</a><br>
+                        </li>
+                        <li>
+                            <a href="/pages/retailers" class="site-nav__link">RETAILERS</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/info">
+                        <div>
+                            <span>INFO</span>
+                            <span class="icon-dropdown">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5" viewBox="5 -7 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                        </div>
+                    </a>
+                    <ul class="site-dropDownMenuInfo">
+                        <li>
+                            <a href="/pages/about" class="site-nav__link">About OMOCAT</a>
+                        </li>
+                        <li>
+                            <a href="http://www.omocat-shop.com/community/contact" class="site-nav__link">Contact Us</a><br>
+                        </li>
+                        <li>
+                            <a href="http://www.omocat-shop.com/community/faq" class="site-nav__link">FAQ</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>
