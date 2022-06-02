@@ -1,9 +1,14 @@
 from django.shortcuts import render
+from .models import *
 from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, template_name='shop/mainPage.html')
+    collections = Collections.objects.all()
+    context = {
+        'collections': collections
+    }
+    return render(request, template_name='shop/mainPage.html', context=context)
 
 
 def collections(request):
