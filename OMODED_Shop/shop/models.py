@@ -21,8 +21,8 @@ class Goods(models.Model):
 
     def get_absolute_url(self):
         collections = [str(col) for col in self.collection.all()]
-        collection = slugify(collections[0])
-        return reverse('good', kwargs={'good_slug': self.slug, 'collection_slug': collection})
+        collection_slug = slugify(collections[0])
+        return reverse('good', kwargs={'good_slug': self.slug, 'collection_slug': collection_slug})
 
     class Meta:
         verbose_name = 'Товар'
@@ -34,6 +34,7 @@ class Collections(models.Model):
     name = models.CharField(max_length=50, unique=True,
                             verbose_name='Наименование коллекции')
     slug = models.SlugField(unique=True)
+    photo = models.ImageField(upload_to='img/collections', blank=True)
 
     def __str__(self):
         return self.name

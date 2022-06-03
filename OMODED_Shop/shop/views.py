@@ -1,18 +1,16 @@
 from django.shortcuts import render
 from .models import *
 from django.http import HttpResponse
+from django.views.generic import ListView
 
 
 def index(request):
     return render(request, template_name='shop/mainPage.html')
 
 
-def collections(request):
-    collections = Collections.objects.all()
-    context = {
-        'collections': collections
-    }
-    return render(request, template_name='shop/collections.html', context=context)
+class Collections(ListView):
+    model = Collections
+    template_name = 'shop/collections.html'
 
 
 def collection(request, collection_slug):

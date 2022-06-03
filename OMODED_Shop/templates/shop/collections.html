@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    {% for collection in collections %}
+    {% for collection in object_list %}
         <a href="{{ collection.get_absolute_url }}">{{ collection.name }}</a>
     {% endfor %}
 </body>
