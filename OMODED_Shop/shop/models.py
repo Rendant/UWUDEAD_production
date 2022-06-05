@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+from django.http import request
 
 
 class Goods(models.Model):
@@ -20,8 +21,10 @@ class Goods(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        collections = [str(col) for col in self.collection.all()]
-        collection_slug = slugify(collections[0])
+        # now_path = request.HttpRequest.get_full_path()
+        # collection_slug = str(now_path).split('/')[-2]
+        collection = [str(col) for col in self.collection.all()]
+        collection_slug = slugify(collection[0])
         return reverse('good', kwargs={'good_slug': self.slug, 'collection_slug': collection_slug})
 
     class Meta:
@@ -51,7 +54,7 @@ class Collections(models.Model):
 class Photos(models.Model):
     good = models.ForeignKey(Goods, on_delete=models.PROTECT,
                              verbose_name='Товар')
-    photo = models.ImageField(upload_to='photos/%y/%m/%d/',
+    photo = models.ImageField(upload_to='photos/%m/',
                               verbose_name='Фото')
 
     def __str__(self):
