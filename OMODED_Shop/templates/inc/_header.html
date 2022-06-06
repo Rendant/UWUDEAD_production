@@ -1,7 +1,24 @@
 {% load static %}
 <header class="header">
         <nav>
-            <p><img src="{% static 'img/logo.jpg' %}" width="72" height="69"></p>
+            <div class="header-icon">
+                <p><img src="{% static 'img/logo.jpg' %}" width="72" height="69"></p>
+                    <ul class="header-links">
+                            <div class="toggle-btn" onclick="openMenu()">
+                                <li class="search-icon"></li>
+                            </div>
+                        <div id="sidebar">
+                            <ul>
+                                <li>Меню сайта</li>
+                                <li><a href="vkladki.html">Главная</a></li>
+                                <li><a href="/">Контакты</a></li>
+                                <li><a href="/">О нас</a></li>
+                            </ul>
+                        </div>
+                        <li class="user-icon"></li>
+                        <li class="buy-icon"></li>
+                    </ul>
+            </div>
             <ul class="nav">
 
                 <li class="nav-item">
