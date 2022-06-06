@@ -21,14 +21,108 @@ p {
 }
 .header-links {
     position: relative;
-    bottom: 50px;
+    bottom: 80px;
     left: 400px;
     justify-content: end;
     text-align: center;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    margin-right: 34px;
 }
+.search-icon {
+    transition: .3s;
+    margin-right: 34px;
+    width: 21px;
+    height: 24px;
+    background: url('../img/search.svg') no-repeat;
+}
+.search-icon:hover {
+    background:url('../img/search-hover.svg')no-repeat 50% 50%;
+}
+.user-icon {
+    transition: .3s;
+    margin-right: 34px;
+    width: 21px;
+    height: 24px;
+    background: url('../img/user.svg') no-repeat;
+}
+.user-icon:hover {
+    background:url('../img/user-hover.svg')no-repeat 50% 50%;
+}
+.buy-icon {
+    transition: .3s;
+    margin-right: 34px;
+    width: 21px;
+    height: 24px;
+    background: url('../img/shopping-cart.svg') no-repeat;
+}
+.buy-icon:hover {
+    background:url('../img/shopping-cart-hover.svg')no-repeat 50% 50%;
+}
+
+#sidebar {
+    position: fixed;
+    width: 719px;
+    height: 100vh;
+    background-color: #57626f;
+    border: 1px solid black;
+    right: -1424px;
+    transition: all 900ms;
+}
+.toggle-btn {
+    position: relative;
+}
+
+#sidebar.active {
+    right: 0px;
+}
+
+#sidebar ul li:first-child {
+    text-align: center;
+    color: white;
+    font-size: 1.95em;
+    list-style: none;
+    padding: 20px 10px 10px 10px;
+}
+
+#sidebar ul li:not(first-child) {
+    width: 90%;
+    margin-left: 10%;
+    color: white;
+    font-size: 1.1em;
+    list-style: none;
+    padding: 15px 10px;
+}
+
+#sidebar ul li a {
+    color: #dfe5eb;
+    text-decoration: none;
+
+}
+
+#sidebar ul li a:hover {
+    color: #59e9df;
+}
+
+#sidebar .toggle-btn {
+    position: relative;
+    left: 1800px;
+    top: 0px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 p1 {
     position: relative;
