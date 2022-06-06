@@ -60,12 +60,19 @@ p {
 .buy-icon:hover {
     background:url('../img/shopping-cart-hover.svg')no-repeat 50% 50%;
 }
-
+.cancel-btn {
+    background: url('../img/cansel.svg') no-repeat;
+    width: 21px;
+    height: 24px;
+}
+.cancel-btn:hover {
+    background:url('../img/cansel-hover.svg')no-repeat 50% 50%;
+}
 #sidebar {
     position: fixed;
     width: 719px;
     height: 100vh;
-    background-color: #57626f;
+    /*background-color: #57626f;*/
     border: 1px solid black;
     right: -1424px;
     transition: all 900ms;
@@ -78,32 +85,32 @@ p {
     right: 0px;
 }
 
-#sidebar ul li:first-child {
-    text-align: center;
-    color: white;
-    font-size: 1.95em;
-    list-style: none;
-    padding: 20px 10px 10px 10px;
-}
+/*#sidebar ul li:first-child {*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*    font-size: 1.95em;*/
+/*    list-style: none;*/
+/*    padding: 20px 10px 10px 10px;*/
+/*}*/
 
-#sidebar ul li:not(first-child) {
-    width: 90%;
-    margin-left: 10%;
-    color: white;
-    font-size: 1.1em;
-    list-style: none;
-    padding: 15px 10px;
-}
+/*#sidebar ul li:not(first-child) {*/
+/*    width: 90%;*/
+/*    margin-left: 10%;*/
+/*    color: white;*/
+/*    font-size: 1.1em;*/
+/*    list-style: none;*/
+/*    padding: 15px 10px;*/
+/*}*/
 
-#sidebar ul li a {
-    color: #dfe5eb;
-    text-decoration: none;
+/*#sidebar ul li a {*/
+/*    color: #dfe5eb;*/
+/*    text-decoration: none;*/
 
-}
+/*}*/
 
-#sidebar ul li a:hover {
-    color: #59e9df;
-}
+/*#sidebar ul li a:hover {*/
+/*    color: #59e9df;*/
+/*}*/
 
 #sidebar .toggle-btn {
     position: relative;
