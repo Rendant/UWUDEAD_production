@@ -16,6 +16,12 @@ class Goods(models.Model):
     size_m = models.PositiveSmallIntegerField(editable=True, blank=True, null=True, verbose_name='Размер M')
     size_l = models.PositiveSmallIntegerField(editable=True, blank=True, null=True, verbose_name='Размер L')
     size_xl = models.PositiveSmallIntegerField(editable=True, blank=True, null=True, verbose_name='Размер XL')
+    photo1 = models.ImageField(upload_to='photos/%m/', blank=True, verbose_name='Фото')
+    photo2 = models.ImageField(upload_to='photos/%m/', blank=True, verbose_name='Фото')
+    photo3 = models.ImageField(upload_to='photos/%m/', blank=True, verbose_name='Фото')
+    photo4 = models.ImageField(upload_to='photos/%m/', blank=True, verbose_name='Фото')
+    photo5 = models.ImageField(upload_to='photos/%m/', blank=True, verbose_name='Фото')
+    photo6 = models.ImageField(upload_to='photos/%m/', blank=True, verbose_name='Фото')
 
     def __str__(self):
         return self.name
@@ -49,22 +55,6 @@ class Collections(models.Model):
         verbose_name = 'Коллекция'
         verbose_name_plural = 'Коллекции'
         ordering = ['id']
-
-
-class Photos(models.Model):
-    good = models.ForeignKey(Goods, on_delete=models.PROTECT,
-                             verbose_name='Товар')
-    photo = models.ImageField(upload_to='photos/%m/',
-                              verbose_name='Фото')
-
-    def __str__(self):
-        return self.good
-
-    class Meta:
-        verbose_name = 'Коллекция'
-        verbose_name_plural = 'Коллекции'
-        ordering = ['id']
-
 
 # class Clients(models.Model):
 #     first_name = models.CharField(max_length=20, verbose_name='Имя')

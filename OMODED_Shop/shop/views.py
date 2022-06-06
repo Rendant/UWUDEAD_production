@@ -34,6 +34,5 @@ class Good(DetailView):
         q = super().get_queryset()
         return q.filter(collection__slug=category)
 
-
 # def good(request, good_slug):
 #     return HttpResponse('<h1>Hello good</h1>')
