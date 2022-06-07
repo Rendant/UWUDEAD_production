@@ -11,17 +11,15 @@ li {
     justify-content: space-around;
     align-items: center;
 }
-p {
+.logo {
     position: relative;
-    justify-content: center;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 25px;
+    /*padding-top: 20px;*/
+    padding-bottom: 30px;
     display: block;
 }
 .header-links {
     position: relative;
-    bottom: 80px;
     left: 400px;
     justify-content: end;
     text-align: center;
@@ -60,18 +58,32 @@ p {
 .buy-icon:hover {
     background:url('../img/shopping-cart-hover.svg')no-repeat 50% 50%;
 }
+.cancel-btn {
+    transition: .3s;
+    background: url('../img/cancel.svg') no-repeat;
+    width: 21px;
+    height: 24px;
+    position: relative;
+    left: 600px;
+    bottom: 250px;
+}
+.cancel-btn:hover {
+    background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
+}
 
 #sidebar {
     position: fixed;
-    width: 719px;
-    height: 100vh;
-    background-color: #57626f;
-    border: 1px solid black;
+    width: 720px;
+    height: 140%;
+    background-color: white;
+    border: 2px solid black;
     right: -1424px;
     transition: all 900ms;
+    opacity: 1;
 }
-.toggle-btn {
+.toggle-btnSearch {
     position: relative;
+    top: 60px;
 }
 
 #sidebar.active {
@@ -80,23 +92,22 @@ p {
 
 #sidebar ul li:first-child {
     text-align: center;
-    color: white;
+    color: black;
     font-size: 1.95em;
     list-style: none;
     padding: 20px 10px 10px 10px;
 }
 
 #sidebar ul li:not(first-child) {
-    width: 90%;
     margin-left: 10%;
-    color: white;
+    color: black;
     font-size: 1.1em;
     list-style: none;
     padding: 15px 10px;
 }
 
 #sidebar ul li a {
-    color: #dfe5eb;
+    color: black;
     text-decoration: none;
 
 }
@@ -108,26 +119,11 @@ p {
 #sidebar .toggle-btn {
     position: relative;
     left: 1800px;
-    top: 0px;
+    top: 40px;
     cursor: pointer;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-p1 {
-    position: relative;
-    text-align: right;
-}
 .nav {
     display: flex;
     list-style-type: none;
@@ -161,6 +157,16 @@ p1 {
     color: #9f9f9f;
 
 }
+
+
+
+
+
+
+
+
+
+
 
 .site-dropDownMenuCollections {
     list-style-type: none;
