@@ -7,5 +7,21 @@
 <body>
 <h1>{{ good.name }}</h1>
 <p>{{ good.description }}</p>
+<img src="{{ good.photo1.url }}" width="243" height="354">
+{% if photo2.blank %}
+    <img src="{{ good.photo2.url }}" width="243" height="354">
+{% endif %}
+{% if photo3.blank %}
+    <img src="{{ good.photo3.url }}" width="243" height="354">
+{% endif %}
+{% if photo4.blank %}
+    <img src="{{ good.photo4.url }}" width="243" height="354">
+{% endif %}
+{% if photo5.blank %}
+    <img src="{{ good.photo5.url }}" width="243" height="354">
+{% endif %}
+{% if photo6.blank %}
+    <img src="{{ good.photo6.url }}" width="243" height="354">
+{% endif %}
 </body>
 </html>

@@ -6,7 +6,9 @@
 </head>
 <body>
     {% for good in filtered_goods %}
+        <img src="{{ good.photo1.url }}" width="243" height="354">
         <a href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+        <br>
     {% endfor %}
 </body>
 </html>
