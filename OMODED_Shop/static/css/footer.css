@@ -11,7 +11,6 @@
     font-weight: 700;
 }
 
-
 .foot_item_links ul li, .foot_item_media ul li{
 	list-style-type: none;
     margin-bottom: 0.25em;
@@ -75,6 +74,7 @@
 
 #fb, #twi, #inst{
 	font-size: 2em;
+	color: #565656;
 }
 
 .footer {
