@@ -11,6 +11,7 @@
     justify-content: space-around;
     align-items: center;
 }
+
 .logo {
     position: relative;
     text-align: center;
@@ -18,6 +19,7 @@
     padding-bottom: 30px;
     display: block;
 }
+
 .header-links {
     position: relative;
     left: 400px;
@@ -28,6 +30,7 @@
     flex-wrap: wrap;
     margin-right: 34px;
 }
+
 .search-icon {
     transition: .3s;
     margin-right: 34px;
@@ -80,7 +83,9 @@
 .cancel-btnSearch:hover {
     background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
 }
+.header-links {
 
+}
 #sidebarSearch {
     position: fixed;
     width: 720px;
@@ -89,8 +94,8 @@
     border: 2px solid black;
     right: -1424px;
     transition: all 900ms;
-    opacity: 1;
     z-index: 1;
+
 }
 .toggle-btnSearch {
     position: relative;
@@ -99,6 +104,18 @@
 
 #sidebarSearch.active {
     right: 0px;
+}
+
+#sidebarSearch.active::after {
+    content:'';
+    display: block;
+    position:relative;
+    top: -150px;
+    left: -1160px;
+    width:1160px;
+    height:1016px;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -100;
 }
 
 #sidebarSearch ul li:first-child {
@@ -207,7 +224,17 @@
 #sidebarUser.active {
     right: 0px;
 }
-
+#sidebarUser.active::after {
+    content:'';
+    display: block;
+    position:relative;
+    top: -250px;
+    left: -1160px;
+    width:1160px;
+    height:1016px;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -100;
+}
 #sidebarUser ul li:first-child {
     font-size: 26px;
     font-weight: 300;
@@ -339,7 +366,17 @@
 #sidebarCart.active {
     right: 0px;
 }
-
+#sidebarCart.active::after {
+    content:'';
+    display: block;
+    position:relative;
+    top: -60px;
+    left: -1160px;
+    width:1160px;
+    height:1016px;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -100;
+}
 #sidebarCart ul li:first-child {
     font-size: 26px;
     font-weight: 300;
