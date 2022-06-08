@@ -60,6 +60,9 @@
 }
 
 
+
+
+
 /*ЭТО крч менюшка поиска*/
 .cancel-btnSearch {
     transition: .3s;
@@ -96,7 +99,7 @@
 
 #sidebarSearch.active {
     right: 0px;
-
+}
 
 #sidebarSearch ul li:first-child {
     font-size: 26px;
