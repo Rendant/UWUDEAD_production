@@ -42,32 +42,6 @@ class Good(DetailView):
         return q.filter(collection__slug=category)
 
 
-# class Search(ListView):
-#     model = Goods
-#     template_name = 'shop/search_list.html'
-#     context_object_name = 'found_goods'
-#
-#     def get_queryset(self):
-#         url_parameter = self.request.GET.get('q')
-#         is_ajax_request = self.request.headers.get("x-requested-with") == "XMLHttpRequest"
-#         if url_parameter:
-#             found_goods = Goods.objects.filter(name__icontains=url_parameter)
-#         else:
-#             found_goods = Goods.objects.all()
-#
-#         if is_ajax_request:
-#             html = render_to_string(
-#                 template_name="inc/_search.html",
-#                 context={"found_goods": found_goods}
-#             )
-#             print(html)
-#
-#             data_dict = {"html_from_view": html}
-#
-#             return JsonResponse(data=data_dict, safe=False)
-#
-#         return found_goods
-
 def search(request):
     ctx = {}
     url_parameter = request.GET.get("q")
@@ -84,7 +58,7 @@ def search(request):
     if is_ajax_request:
         html = render_to_string(
             template_name="inc/_search.html",
-            context={"found_goods": found_goods}
+            context={"found_goods_ajax": found_goods}
         )
 
         data_dict = {"html_from_view": html}
