@@ -12,13 +12,19 @@
                             <li class="palo4ka-lol"></li>
                             <li>
                                 <span>
-                                    <input type="text" name="q" placeholder="  Search our store" class="search" autocomplete="off" aria-label="  Search our store">
-                                    <button type="submit" class="submit-btnSearch">
-                                        <i class="submit-btnSearchIcon"></i>
-                                    </button>
+                                    <form action="/search/" method="get">
+                                        {% csrf_token %}
+                                        <input id="user-input" type="text" name="q" placeholder="  Search our store" class="search" autocomplete="off" aria-label="  Search our store">
+                                        <button type="submit" class="submit-btnSearch">
+                                            <i id="search-icon" class="submit-btnSearchIcon"></i>
+                                        </button>
+                                    </form>
                                 </span>
                             </li>
                             <li class="cancel-btnSearch" onclick="openMenuSearch()"></li>
+                            <li id="replaceable-content">
+                                {% include 'inc/_search.html' %}
+                            </li>
                         </ul>
                     </div>
                     <div class="toggle-btnUser" onclick="openMenuUser()">
