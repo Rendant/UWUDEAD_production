@@ -1,9 +1,74 @@
 {% load static %}
 <header class="header">
         <nav>
-            <p><img src="{% static 'img/logo.jpg' %}" width="72" height="69"></p>
-            <ul class="nav">
+            <div class="header-icon">
+                <ul class="header-links">
+                    <div class="toggle-btnSearch" onclick="openMenuSearch()">
+                        <li class="search-icon"></li>
+                    </div>
+                    <div id="sidebarSearch">
+                        <ul>
+                            <li>Lookin' for something?</li>
+                            <li class="palo4ka-lol"></li>
+                            <li>
+                                <span>
+                                    <form action="/search/" method="get">
+                                        {% csrf_token %}
+                                        <input id="user-input" type="text" name="q" placeholder="  Search our store" class="search" autocomplete="off" aria-label="  Search our store">
+                                        <button type="submit" class="submit-btnSearch">
+                                            <i id="search-icon" class="submit-btnSearchIcon"></i>
+                                        </button>
+                                    </form>
+                                </span>
+                            </li>
+                            <li class="cancel-btnSearch" onclick="openMenuSearch()"></li>
+                            <li id="replaceable-content">
+                                {% include 'inc/_search.html' %}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="toggle-btnUser" onclick="openMenuUser()">
+                        <li class="user-icon"></li>
+                    </div>
+                    <div id="sidebarUser">
+                        <ul>
+                            <li>Login</li>
+                            <li class="palo4ka-lol-2"></li>
+                            <li>
+                                <div class="emailAndPassword">
+                                    <span>
+                                        <input type="email" name="q" placeholder="  Email" class="emailUser" autocomplete="off">
+                                        <input type="password" name="q" placeholder="  Password" class="passwordUser" autocomplete="off">
+                                        <input type="submit" class="SignIn" value="Sign In">
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="UserLinks-createAccount" href="/account/register">Create account</a>
+                            </li>
+                            <li>
+                                <a class="UserLinks-ForgotYourPassword" href="#">Forgot your password?</a>
+                            </li>
+                            <li class="cancel-btnUser" onclick="openMenuUser()"></li>
+                        </ul>
+                    </div>
+                    <div class="toggle-btnCart" onclick="openMenuCart()">
+                        <li class="buy-icon"></li>
+                    </div>
+                    <div id="sidebarCart">
+                        <ul>
+                            <li>Shopping Cart</li>
+                            <li class="palo4ka-lol-3"></li>
 
+                            <li class="cancel-btnCart" onclick="openMenuCart()"></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <h1 class="logo">
+                <a href="/"><img src="{% static 'img/logo.jpg' %}" width="72" height="69"></a>
+            </h1>
+            <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="/collections">
                     <div>

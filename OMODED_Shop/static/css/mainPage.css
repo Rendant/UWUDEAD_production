@@ -60,9 +60,6 @@
 }
 
 
-
-
-
 /*ЭТО крч менюшка поиска*/
 .cancel-btnSearch {
     transition: .3s;
@@ -99,7 +96,7 @@
 
 #sidebarSearch.active {
     right: 0px;
-}
+
 
 #sidebarSearch ul li:first-child {
     font-size: 26px;
@@ -144,6 +141,19 @@
     border: 1px solid #b3b3b3;
     width: 500px;
     top: 20px;
+}
+@keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+
+.blink {
+    text-decoration: blink;
+    animation-name: blinker;
+    animation-duration: 0.6s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
 }
 .submit-btnSearchIcon {
     background: url('../img/search-button.svg') no-repeat;
