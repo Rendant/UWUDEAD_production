@@ -1,5 +1,5 @@
-{% if found_goods %}
-        {% for good in found_goods %}
+{% if found_goods_ajax %}
+        {% for good in found_goods_ajax %}
             <li><a href="{{ good.get_absolute_url }}">{{ good.name }}</a></li>
         {% endfor %}
 {% endif %}
