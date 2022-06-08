@@ -1,0 +1,5 @@
+{% if found_goods %}
+        {% for good in found_goods %}
+            <li><a href="{{ good.get_absolute_url }}">{{ good.name }}</a></li>
+        {% endfor %}
+{% endif %}

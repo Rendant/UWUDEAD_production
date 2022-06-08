@@ -3,6 +3,8 @@ from .models import *
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
 from django.views.decorators.cache import cache_page
+from django.template.loader import render_to_string
+from django.http import JsonResponse
 
 
 def index(request):
@@ -22,6 +24,11 @@ class Collection(ListView):
     def get_queryset(self):
         return Goods.objects.filter(collection__slug=self.kwargs['collection_slug'])
 
+    def get_context_data(self, **kwargs):
+        context = super(Collection, self).get_context_data(**kwargs)
+        context['collection_slug'] = self.kwargs['collection_slug']
+        return context
+
 
 class Good(DetailView):
     model = Goods
@@ -34,5 +41,54 @@ class Good(DetailView):
         q = super().get_queryset()
         return q.filter(collection__slug=category)
 
-# def good(request, good_slug):
-#     return HttpResponse('<h1>Hello good</h1>')
+
+# class Search(ListView):
+#     model = Goods
+#     template_name = 'shop/search_list.html'
+#     context_object_name = 'found_goods'
+#
+#     def get_queryset(self):
+#         url_parameter = self.request.GET.get('q')
+#         is_ajax_request = self.request.headers.get("x-requested-with") == "XMLHttpRequest"
+#         if url_parameter:
+#             found_goods = Goods.objects.filter(name__icontains=url_parameter)
+#         else:
+#             found_goods = Goods.objects.all()
+#
+#         if is_ajax_request:
+#             html = render_to_string(
+#                 template_name="inc/_search.html",
+#                 context={"found_goods": found_goods}
+#             )
+#             print(html)
+#
+#             data_dict = {"html_from_view": html}
+#
+#             return JsonResponse(data=data_dict, safe=False)
+#
+#         return found_goods
+
+def search(request):
+    ctx = {}
+    url_parameter = request.GET.get("q")
+
+    if url_parameter:
+        found_goods = Goods.objects.filter(name__icontains=url_parameter)
+    else:
+        found_goods = Goods.objects.all()
+
+    ctx["found_goods"] = found_goods
+
+    is_ajax_request = request.headers.get("x-requested-with") == "XMLHttpRequest"
+
+    if is_ajax_request:
+        html = render_to_string(
+            template_name="inc/_search.html",
+            context={"found_goods": found_goods}
+        )
+
+        data_dict = {"html_from_view": html}
+
+        return JsonResponse(data=data_dict, safe=False)
+
+    return render(request, "shop/search_list.html", context=ctx)
