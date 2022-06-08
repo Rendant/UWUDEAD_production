@@ -3,7 +3,7 @@
     padding: 0;
     font-family: Inconsolata, sans-serif;
 }
-li {
+.nav li {
     margin-bottom: 10px;
 }
 .header {
@@ -58,7 +58,13 @@ li {
 .buy-icon:hover {
     background:url('../img/shopping-cart-hover.svg')no-repeat 50% 50%;
 }
-.cancel-btn {
+
+
+
+
+
+/*ЭТО крч менюшка поиска*/
+.cancel-btnSearch {
     transition: .3s;
     background: url('../img/cancel.svg') no-repeat;
     width: 20px;
@@ -71,11 +77,11 @@ li {
     /*padding: 15px 10px;*/
     /*z-index: 2;*/
 }
-.cancel-btn:hover {
+.cancel-btnSearch:hover {
     background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
 }
 
-#sidebar {
+#sidebarSearch {
     position: fixed;
     width: 720px;
     height: 140%;
@@ -91,11 +97,11 @@ li {
     top: 60px;
 }
 
-#sidebar.active {
+#sidebarSearch.active {
     right: 0px;
 }
 
-#sidebar ul li:first-child {
+#sidebarSearch ul li:first-child {
     font-size: 26px;
     font-weight: 300;
     width: 100%;
@@ -104,7 +110,7 @@ li {
     padding-top: 30px
 }
 
-#sidebar ul li:not(first-child) {
+#sidebarSearch ul li:not(first-child) {
     /*margin-left: 10%;*/
     color: black;
     font-size: 1.1em;
@@ -112,7 +118,7 @@ li {
     /*padding: 15px 10px;*/
 }
 
-#sidebar .toggle-btn {
+#sidebarSearch .toggle-btn {
     position: relative;
     left: 1800px;
     top: 40px;
@@ -139,7 +145,6 @@ li {
     width: 500px;
     top: 20px;
 }
-
 .submit-btnSearchIcon {
     background: url('../img/search-button.svg') no-repeat;
     position: relative;
@@ -156,12 +161,226 @@ li {
     background: black;
     border:none;
     width: 36px;
-    height: 38px;
+    height: 40px;
     cursor: pointer;
     top: 25px;
 
     /*z-index: 0;*/
 }
+
+
+
+/*А эта менюшка юзера*/
+.cancel-btnUser {
+    transition: .3s;
+    background: url('../img/cancel.svg') no-repeat;
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    /*left: 600px;*/
+    /*bottom: 250px;*/
+    /*padding: 15px 10px;*/
+    /*z-index: 2;*/
+}
+.cancel-btnUser:hover {
+    background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
+}
+
+#sidebarUser {
+    position: fixed;
+    width: 720px;
+    height: 140%;
+    background-color: white;
+    border: 2px solid black;
+    right: -1424px;
+    transition: all 900ms;
+    opacity: 1;
+    z-index: 1;
+}
+.toggle-btnUser {
+    position: relative;
+    top: 60px;
+}
+
+#sidebarUser.active {
+    right: 0px;
+}
+
+#sidebarUser ul li:first-child {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 30px
+}
+
+#sidebarUser ul li:not(first-child) {
+    /*margin-left: 10%;*/
+    color: black;
+    font-size: 1.1em;
+    list-style: none;
+    /*padding: 15px 10px;*/
+}
+
+#sidebarUser .toggle-btn {
+    position: relative;
+    left: 1800px;
+    top: 40px;
+    cursor: pointer;
+}
+.palo4ka-lol-2 {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    position: absolute;
+    left: 345px;
+    background: #333333;
+    opacity: .5;
+
+}
+.emailUser {
+    position: relative;
+    display: block;
+    margin: 0;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 200px;
+    top: 20px;
+    left: 260px;
+}
+.passwordUser {
+    position: relative;
+    display: block;
+    margin: 0;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 200px;
+    top: 30px;
+    left: 260px;
+}
+.SignIn {
+    position: relative;
+    display: block;
+    top: 40px;
+    left: 260px;
+    /*text-align: center;*/
+    color: white;
+    /*right: 0px;*/
+    background: #9f9f9f;
+    border: none;
+    width: 202px;
+    height: 38px;
+    cursor: pointer;
+    /*top: 25px;*/
+    /*z-index: 0;*/
+}
+.SignIn:hover {
+    background: black;
+}
+.UserLinks-createAccount {
+    position: relative;
+    top: 50px;
+    text-decoration: none;
+    color: black;
+}
+.UserLinks-createAccount:hover {
+    color: #9f9f9f;
+}
+.UserLinks-ForgotYourPassword {
+    position: relative;
+    top: 60px;
+    text-decoration: none;
+    color: black;
+}
+.UserLinks-ForgotYourPassword:hover {
+    color: #9f9f9f;
+}
+/*Эта менюшка покупок*/
+.cancel-btnCart {
+    transition: .3s;
+    background: url('../img/cancel.svg') no-repeat;
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    /*left: 600px;*/
+    /*bottom: 250px;*/
+    /*padding: 15px 10px;*/
+    /*z-index: 2;*/
+}
+.cancel-btnCart:hover {
+    background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
+}
+
+#sidebarCart {
+    position: fixed;
+    width: 720px;
+    height: 140%;
+    background-color: white;
+    border: 2px solid black;
+    right: -1424px;
+    transition: all 900ms;
+    opacity: 1;
+    z-index: 1;
+}
+.toggle-btnCart {
+    position: relative;
+    top: 60px;
+}
+
+#sidebarCart.active {
+    right: 0px;
+}
+
+#sidebarCart ul li:first-child {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 30px
+}
+
+#sidebarCart ul li:not(first-child) {
+    /*margin-left: 10%;*/
+    color: black;
+    font-size: 1.1em;
+    list-style: none;
+    /*padding: 15px 10px;*/
+}
+
+#sidebarCart .toggle-btn {
+    position: relative;
+    left: 1800px;
+    top: 40px;
+    cursor: pointer;
+}
+.palo4ka-lol-3 {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    position: absolute;
+    left: 345px;
+    background: #333333;
+    opacity: .5;
+
+}
+
+
+
+
+
+
 
 .nav {
     display: flex;
