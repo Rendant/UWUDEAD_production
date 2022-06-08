@@ -3,153 +3,573 @@
     padding: 0;
     font-family: Inconsolata, sans-serif;
 }
-
-.footerHeader{
-	color: #565656;
-    font-size: 16px;
-    margin-bottom: 15px;
-    font-weight: 700;
+.nav li {
+    margin-bottom: 10px;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo {
+    position: relative;
+    text-align: center;
+    /*padding-top: 20px;*/
+    padding-bottom: 30px;
+    display: block;
+}
+.header-links {
+    position: relative;
+    left: 400px;
+    justify-content: end;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 34px;
+}
+.search-icon {
+    transition: .3s;
+    margin-right: 34px;
+    width: 21px;
+    height: 24px;
+    background: url('../img/search.svg') no-repeat;
+}
+.search-icon:hover {
+    background:url('../img/search-hover.svg')no-repeat 50% 50%;
+}
+.user-icon {
+    transition: .3s;
+    margin-right: 34px;
+    width: 21px;
+    height: 24px;
+    background: url('../img/user.svg') no-repeat;
+}
+.user-icon:hover {
+    background:url('../img/user-hover.svg')no-repeat 50% 50%;
+}
+.buy-icon {
+    transition: .3s;
+    margin-right: 34px;
+    width: 21px;
+    height: 24px;
+    background: url('../img/shopping-cart.svg') no-repeat;
+}
+.buy-icon:hover {
+    background:url('../img/shopping-cart-hover.svg')no-repeat 50% 50%;
 }
 
-.foot_item_links ul li, .foot_item_media ul li{
-	list-style-type: none;
-    margin-bottom: 0.25em;
+
+
+
+
+/*ЭТО крч менюшка поиска*/
+.cancel-btnSearch {
+    transition: .3s;
+    background: url('../img/cancel.svg') no-repeat;
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    /*left: 600px;*/
+    /*bottom: 250px;*/
+    /*padding: 15px 10px;*/
+    /*z-index: 2;*/
+}
+.cancel-btnSearch:hover {
+    background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
 }
 
-.footer-link-content{
-	margin: 0;
-    padding: 0;
+#sidebarSearch {
+    position: fixed;
+    width: 720px;
+    height: 140%;
+    background-color: white;
+    border: 2px solid black;
+    right: -1424px;
+    transition: all 900ms;
+    opacity: 1;
+    z-index: 1;
+}
+.toggle-btnSearch {
+    position: relative;
+    top: 60px;
 }
 
-.footer-link-content a{
-    color: #696969;
-    margin: 0.2em 0;
+#sidebarSearch.active {
+    right: 0px;
 }
 
-.social-media-link{
-	list-style-type: none;
-	height: 5px;
-}
-
-.logo_of_media{
-	margin: 0;
-    padding: 0;
-    content: "";
-    display: inline;
-    clear: both;
-}
-
-.foot_item_links {
-    box-sizing: border-box;
-    float: left;
-    min-height: 1px;
-    padding-left: 30px;
-    vertical-align: top;
+#sidebarSearch ul li:first-child {
+    font-size: 26px;
+    font-weight: 300;
     width: 100%;
-}
-
-.foot_item_media{
-	box-sizing: border-box;
-    float: left;
-    min-height: 1px;
-    padding-left: 30px;
-    vertical-align: top;
-    width: 100%;
-}
-
-.foot_item_news{
-	box-sizing: border-box;
-    float: left;
-    min-height: 1px;
-    padding-left: 30px;
-    vertical-align: top;
-    width: 100%;
-}
-
-.footer a {
-    text-decoration: none;
-    background: transparent;
-}
-
-#fb, #twi, #inst{
-	font-size: 2em;
-}
-
-.footer {
-    background-color: #fff;
-    padding: 30px 0;
-    color: #565656;
-    font-weight: 400;
-}
-
-.footer-link-content ul li a{
-    padding: 30px 0;
-    color: #565656;
-    font-weight: 500;
-}
-
-@media screen and (max-width:  767px) {
-    .footerHeader {
-    padding-top: 30px;
-    margin-top: 30px;
-    border-top: 1px solid #e6e6e6;
-    }
-
-}
-
-.logo_of_media li{
-    display: inline;
-    margin: 0 15px 15px 0;
-}
-
-.foot_item_links .footerHeader:first-child{
-    border-top: none;
-}
-
-@media screen and (max-width:  767px) {
-    .foot_item_links .footerHeader:first-child{
-    padding-top: 20px;
-    border-top: none;
-    }
-    input.footer-email-input{
-        border: 1px solid #000;
-        padding-left: 10px;
-        box-sizing: border-box;
-    }
-}
-
-.footer-email-submit{
-    background-color: #565656;
-    margin: 15px 0 0 0;
-    padding: 10px 20px;
-    max-width: 100%;
-    height: 37px;
-    font-weight: 400;
-    font-size: 12px;
-    color: #fff;
-    border: 1px solid transparent;
+    text-align: center;
     display: inline-block;
+    padding-top: 30px
+}
+
+#sidebarSearch ul li:not(first-child) {
+    /*margin-left: 10%;*/
+    color: black;
+    font-size: 1.1em;
+    list-style: none;
+    /*padding: 15px 10px;*/
+}
+
+#sidebarSearch .toggle-btn {
+    position: relative;
+    left: 1800px;
+    top: 40px;
     cursor: pointer;
 }
+.palo4ka-lol {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    position: absolute;
+    left: 350px;
+    background: #333333;
+    opacity: .5;
 
-.footer-email-input{
-    border: none;
-    border-bottom: 1px solid #565656;
-    height: 37px;
-    max-width: 100%;
 }
-
-.foot-item{
-    padding-left: 30px;
-    width: 33.33px;
-}
-
-.container{
+.search {
+    position: relative;
     margin: 0;
-    padding: 0;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 500px;
+    top: 20px;
+}
+.submit-btnSearchIcon {
+    background: url('../img/search-button.svg') no-repeat;
+    position: relative;
+    width: 21px;
+    height: 20px;
+    text-rendering: inherit;
+    display: inline-block;
+    /*z-index: 3;*/
+}
+.submit-btnSearch {
+    position: relative;
+    top: 5px;
+    right: 8px;
+    background: black;
+    border:none;
+    width: 36px;
+    height: 40px;
+    cursor: pointer;
+    top: 25px;
+
+    /*z-index: 0;*/
 }
 
-.input-group{
+
+
+/*А эта менюшка юзера*/
+.cancel-btnUser {
+    transition: .3s;
+    background: url('../img/cancel.svg') no-repeat;
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    /*left: 600px;*/
+    /*bottom: 250px;*/
+    /*padding: 15px 10px;*/
+    /*z-index: 2;*/
+}
+.cancel-btnUser:hover {
+    background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
+}
+
+#sidebarUser {
+    position: fixed;
+    width: 720px;
+    height: 140%;
+    background-color: white;
+    border: 2px solid black;
+    right: -1424px;
+    transition: all 900ms;
+    opacity: 1;
+    z-index: 1;
+}
+.toggle-btnUser {
+    position: relative;
+    top: 60px;
+}
+
+#sidebarUser.active {
+    right: 0px;
+}
+
+#sidebarUser ul li:first-child {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 30px
+}
+
+#sidebarUser ul li:not(first-child) {
+    /*margin-left: 10%;*/
+    color: black;
+    font-size: 1.1em;
+    list-style: none;
+    /*padding: 15px 10px;*/
+}
+
+#sidebarUser .toggle-btn {
+    position: relative;
+    left: 1800px;
+    top: 40px;
+    cursor: pointer;
+}
+.palo4ka-lol-2 {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    position: absolute;
+    left: 345px;
+    background: #333333;
+    opacity: .5;
+
+}
+.emailUser {
+    position: relative;
+    display: block;
+    margin: 0;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 200px;
+    top: 20px;
+    left: 260px;
+}
+.passwordUser {
+    position: relative;
+    display: block;
+    margin: 0;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 200px;
+    top: 30px;
+    left: 260px;
+}
+.SignIn {
+    position: relative;
+    display: block;
+    top: 40px;
+    left: 260px;
+    /*text-align: center;*/
+    color: white;
+    /*right: 0px;*/
+    background: #9f9f9f;
+    border: none;
+    width: 202px;
+    height: 38px;
+    cursor: pointer;
+    /*top: 25px;*/
+    /*z-index: 0;*/
+}
+.SignIn:hover {
+    background: black;
+}
+.UserLinks-createAccount {
+    position: relative;
+    top: 50px;
+    text-decoration: none;
+    color: black;
+}
+.UserLinks-createAccount:hover {
+    color: #9f9f9f;
+}
+.UserLinks-ForgotYourPassword {
+    position: relative;
+    top: 60px;
+    text-decoration: none;
+    color: black;
+}
+.UserLinks-ForgotYourPassword:hover {
+    color: #9f9f9f;
+}
+/*Эта менюшка покупок*/
+.cancel-btnCart {
+    transition: .3s;
+    background: url('../img/cancel.svg') no-repeat;
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    /*left: 600px;*/
+    /*bottom: 250px;*/
+    /*padding: 15px 10px;*/
+    /*z-index: 2;*/
+}
+.cancel-btnCart:hover {
+    background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
+}
+
+#sidebarCart {
+    position: fixed;
+    width: 720px;
+    height: 140%;
+    background-color: white;
+    border: 2px solid black;
+    right: -1424px;
+    transition: all 900ms;
+    opacity: 1;
+    z-index: 1;
+}
+.toggle-btnCart {
+    position: relative;
+    top: 60px;
+}
+
+#sidebarCart.active {
+    right: 0px;
+}
+
+#sidebarCart ul li:first-child {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 30px
+}
+
+#sidebarCart ul li:not(first-child) {
+    /*margin-left: 10%;*/
+    color: black;
+    font-size: 1.1em;
+    list-style: none;
+    /*padding: 15px 10px;*/
+}
+
+#sidebarCart .toggle-btn {
+    position: relative;
+    left: 1800px;
+    top: 40px;
+    cursor: pointer;
+}
+.palo4ka-lol-3 {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    position: absolute;
+    left: 345px;
+    background: #333333;
+    opacity: .5;
+
+}
+
+
+
+
+
+
+
+.nav {
     display: flex;
-    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    color:black;
+    font-size: 18px;
+    top: 183px;
+}
+.nav-item {
+    margin-left: 34px;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+}
+
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    transition: color .2s;
+}
+.nav-link:hover {
+    color: #9f9f9f;
+}
+.site-nav__link {
+    text-decoration: none;
+    color: black;
+    text-decoration: none;
+    transition: color .2s;
+}
+.site-nav__link:hover {
+    color: #9f9f9f;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.site-dropDownMenuCollections {
+    list-style-type: none;
+
+    position: absolute;
+    z-index: 4;
+    left: 60%;
+    top: 25%;
+    width: 150px;
+    margin-top: 25px;
+    padding: 0px;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0px);
+    transition: .3s;
+
+}
+.nav > li:hover .site-dropDownMenuCollections{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+
+}
+
+.site-dropDownMenuApparel {
+    list-style-type: none;
+    position: absolute;
+    z-index: 4;
+    left: 85%;
+    top: 25%;
+    width: 150px;
+    margin-top: 25px;
+    padding: 0;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0px);
+    transition: .3s;
+}
+.nav > li:hover .site-dropDownMenuApparel{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+
+}
+.site-dropDownMenuAccessories {
+    list-style-type: none;
+
+    position: absolute;
+    z-index: 4;
+    left: 65%;
+    top: 25%;
+    width: 150px;
+    padding: 0;
+    margin-top: 25px;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0px);
+    transition: .3s;
+}
+.nav > li:hover .site-dropDownMenuAccessories{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+
+}
+.site-dropDownMenuPrintedMatter {
+    list-style-type: none;
+
+    position: absolute;
+    z-index: 4;
+    left: 45%;
+    top: 25%;
+    width: 150px;
+    padding: 0;
+    margin-top: 25px;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0px);
+    transition: .3s;
+}
+.nav > li:hover .site-dropDownMenuPrintedMatter{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+
+}
+.site-dropDownMenuShowcase {
+    list-style-type: none;
+
+    position: absolute;
+    z-index: 4;
+    left: 75%;
+    top: 25%;
+    width: 190px;
+    padding: 0;
+    margin-top: 25px;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0px);
+    transition: .3s;
+
+}
+.nav > li:hover .site-dropDownMenuShowcase{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+
+}
+.site-dropDownMenuInfo {
+    list-style-type: none;
+
+    position: absolute;
+    z-index: 4;
+    left: 80%;
+    top: 25%;
+    width: 150px;
+    padding: 0;
+    margin-top: 25px;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0px);
+    transition: .3s;
+}
+.nav > li:hover .site-dropDownMenuInfo{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+
 }
