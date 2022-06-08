@@ -61,11 +61,15 @@ li {
 .cancel-btn {
     transition: .3s;
     background: url('../img/cancel.svg') no-repeat;
-    width: 21px;
+    width: 20px;
     height: 24px;
-    position: relative;
-    left: 600px;
-    bottom: 250px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    /*left: 600px;*/
+    /*bottom: 250px;*/
+    /*padding: 15px 10px;*/
+    /*z-index: 2;*/
 }
 .cancel-btn:hover {
     background:url('../img/cancel-hover.svg')no-repeat 50% 50%;
@@ -80,6 +84,7 @@ li {
     right: -1424px;
     transition: all 900ms;
     opacity: 1;
+    z-index: 1;
 }
 .toggle-btnSearch {
     position: relative;
@@ -91,29 +96,20 @@ li {
 }
 
 #sidebar ul li:first-child {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
     text-align: center;
-    color: black;
-    font-size: 1.95em;
-    list-style: none;
-    padding: 20px 10px 10px 10px;
+    display: inline-block;
+    padding-top: 30px
 }
 
 #sidebar ul li:not(first-child) {
-    margin-left: 10%;
+    /*margin-left: 10%;*/
     color: black;
     font-size: 1.1em;
     list-style: none;
-    padding: 15px 10px;
-}
-
-#sidebar ul li a {
-    color: black;
-    text-decoration: none;
-
-}
-
-#sidebar ul li a:hover {
-    color: #59e9df;
+    /*padding: 15px 10px;*/
 }
 
 #sidebar .toggle-btn {
@@ -122,7 +118,50 @@ li {
     top: 40px;
     cursor: pointer;
 }
+.palo4ka-lol {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    position: absolute;
+    left: 350px;
+    background: #333333;
+    opacity: .5;
 
+}
+.search {
+    position: relative;
+    margin: 0;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 500px;
+    top: 20px;
+}
+
+.submit-btnSearchIcon {
+    background: url('../img/search-button.svg') no-repeat;
+    position: relative;
+    width: 21px;
+    height: 20px;
+    text-rendering: inherit;
+    display: inline-block;
+    /*z-index: 3;*/
+}
+.submit-btnSearch {
+    position: relative;
+    top: 5px;
+    right: 8px;
+    background: black;
+    border:none;
+    width: 36px;
+    height: 38px;
+    cursor: pointer;
+    top: 25px;
+
+    /*z-index: 0;*/
+}
 
 .nav {
     display: flex;
@@ -136,6 +175,7 @@ li {
     margin-left: 34px;
     display: inline-block;
     position: relative;
+    z-index: 0;
 }
 
 
