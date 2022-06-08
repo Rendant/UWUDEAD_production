@@ -16,9 +16,7 @@
 {#	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>#}
 {#	<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500&display=swap" rel="stylesheet">#}
 <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
+  src="{% static 'js/jquery.js' %}"></script>
 <!--    python manage.py runserver-->
 </head>
 <body>
@@ -26,4 +24,5 @@
     {% block body %}{% endblock %}
     {% include 'inc/_footer.html' %}
 </body>
+<script src="{% static 'js/ajax_search.js' %}"></script>
 </html>
