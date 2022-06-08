@@ -3,201 +3,153 @@
     padding: 0;
     font-family: Inconsolata, sans-serif;
 }
-li {
-    margin-bottom: 10px;
+
+.footerHeader{
+	color: #565656;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+.foot_item_links ul li, .foot_item_media ul li{
+	list-style-type: none;
+    margin-bottom: 0.25em;
 }
-p {
-    position: relative;
-    text-align: center;
+
+.footer-link-content{
+	margin: 0;
+    padding: 0;
+}
+
+.footer-link-content a{
+    color: #696969;
+    margin: 0.2em 0;
+}
+
+.social-media-link{
+	list-style-type: none;
+	height: 5px;
+}
+
+.logo_of_media{
+	margin: 0;
+    padding: 0;
+    content: "";
+    display: inline;
+    clear: both;
+}
+
+.foot_item_links {
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.foot_item_media{
+	box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.foot_item_news{
+	box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.footer a {
+    text-decoration: none;
+    background: transparent;
+}
+
+#fb, #twi, #inst{
+	font-size: 2em;
+}
+
+.footer {
+    background-color: #fff;
+    padding: 30px 0;
+    color: #565656;
+    font-weight: 400;
+}
+
+.footer-link-content ul li a{
+    padding: 30px 0;
+    color: #565656;
+    font-weight: 500;
+}
+
+@media screen and (max-width:  767px) {
+    .footerHeader {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #e6e6e6;
+    }
+
+}
+
+.logo_of_media li{
+    display: inline;
+    margin: 0 15px 15px 0;
+}
+
+.foot_item_links .footerHeader:first-child{
+    border-top: none;
+}
+
+@media screen and (max-width:  767px) {
+    .foot_item_links .footerHeader:first-child{
     padding-top: 20px;
-    padding-bottom: 25px;
+    border-top: none;
+    }
+    input.footer-email-input{
+        border: 1px solid #000;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
 }
-p1 {
-    position: relative;
-    text-align: right;
-}
-.nav {
-    display: flex;
-    list-style-type: none;
-    padding-left: 0;
-    color:black;
-    font-size: 18px;
-    top: 183px;
-}
-.nav-item {
-    margin-left: 34px;
+
+.footer-email-submit{
+    background-color: #565656;
+    margin: 15px 0 0 0;
+    padding: 10px 20px;
+    max-width: 100%;
+    height: 37px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid transparent;
     display: inline-block;
-    position: relative;
+    cursor: pointer;
 }
 
-
-.nav-link {
-    color: black;
-    text-decoration: none;
-    transition: color .2s;
-}
-.nav-link:hover {
-    color: #9f9f9f;
-}
-.site-nav__link {
-    text-decoration: none;
-    color: black;
-    text-decoration: none;
-    transition: color .2s;
-}
-.site-nav__link:hover {
-    color: #9f9f9f;
-
+.footer-email-input{
+    border: none;
+    border-bottom: 1px solid #565656;
+    height: 37px;
+    max-width: 100%;
 }
 
-.site-dropDownMenuCollections {
-    list-style-type: none;
-
-    position: absolute;
-    z-index: 4;
-    left: 60%;
-    top: 25%;
-    width: 150px;
-    margin-top: 25px;
-    padding: 0px;
-    background: white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-50%, 0px);
-    transition: .3s;
-
-}
-.nav > li:hover .site-dropDownMenuCollections{
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0px);
-
+.foot-item{
+    padding-left: 30px;
+    width: 33.33px;
 }
 
-.site-dropDownMenuApparel {
-    list-style-type: none;
-    position: absolute;
-    z-index: 4;
-    left: 85%;
-    top: 25%;
-    width: 150px;
-    margin-top: 25px;
+.container{
+    margin: 0;
     padding: 0;
-    background: white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-50%, 0px);
-    transition: .3s;
 }
-.nav > li:hover .site-dropDownMenuApparel{
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0px);
 
-}
-.site-dropDownMenuAccessories {
-    list-style-type: none;
-
-    position: absolute;
-    z-index: 4;
-    left: 65%;
-    top: 25%;
-    width: 150px;
-    padding: 0;
-    margin-top: 25px;
-    background: white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-50%, 0px);
-    transition: .3s;
-}
-.nav > li:hover .site-dropDownMenuAccessories{
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0px);
-
-}
-.site-dropDownMenuPrintedMatter {
-    list-style-type: none;
-
-    position: absolute;
-    z-index: 4;
-    left: 55%;
-    top: 25%;
-    width: 150px;
-    padding: 0;
-    margin-top: 25px;
-    background: white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-50%, 0px);
-    transition: .3s;
-}
-.nav > li:hover .site-dropDownMenuPrintedMatter{
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0px);
-
-}
-.site-dropDownMenuShowcase {
-    list-style-type: none;
-
-    position: absolute;
-    z-index: 4;
-    left: 75%;
-    top: 25%;
-    width: 190px;
-    padding: 0;
-    margin-top: 25px;
-    background: white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-50%, 0px);
-    transition: .3s;
-
-}
-.nav > li:hover .site-dropDownMenuShowcase{
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0px);
-
-}
-.site-dropDownMenuInfo {
-    list-style-type: none;
-
-    position: absolute;
-    z-index: 4;
-    left: 80%;
-    top: 25%;
-    width: 150px;
-    padding: 0;
-    margin-top: 25px;
-    background: white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-50%, 0px);
-    transition: .3s;
-}
-.nav > li:hover .site-dropDownMenuInfo{
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0px);
-
+.input-group{
+    display: flex;
+    flex-direction: column;
 }
