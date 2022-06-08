@@ -22,6 +22,11 @@ class Collection(ListView):
     def get_queryset(self):
         return Goods.objects.filter(collection__slug=self.kwargs['collection_slug'])
 
+    def get_context_data(self, **kwargs):
+        context = super(Collection, self).get_context_data(**kwargs)
+        context['collection_slug'] = self.kwargs['collection_slug']
+        return context
+
 
 class Good(DetailView):
     model = Goods
@@ -34,5 +39,15 @@ class Good(DetailView):
         q = super().get_queryset()
         return q.filter(collection__slug=category)
 
-# def good(request, good_slug):
-#     return HttpResponse('<h1>Hello good</h1>')
+
+class Search(ListView):
+    model = Goods
+    template_name = 'shop/search_list.html'
+    context_object_name = 'found_goods'
+
+    def get_queryset(self):
+        url_parameter = self.request.GET.get('q')
+        if url_parameter:
+            return Goods.objects.filter(name__icontains=url_parameter)
+        else:
+            return None

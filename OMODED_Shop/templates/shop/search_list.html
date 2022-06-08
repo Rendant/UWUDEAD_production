@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block body %}
+{% for good in found_goods %}
+    <a href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+{% endfor %}
+{% endblock %}
