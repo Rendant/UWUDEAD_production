@@ -1,33 +1,19 @@
-body, input, textarea, button, select {
-    font-size: 16px;
-    line-height: 1.6;
-    font-family: Archivo Narrow,sans-serif;
-    color: #333;
-    font-weight: 400;
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: Inconsolata, sans-serif;
 }
 
 .footerHeader{
 	color: #565656;
     font-size: 16px;
     margin-bottom: 15px;
-    font-family: Archivo Narrow,sans-serif;
     font-weight: 700;
 }
-
 
 .foot_item_links ul li, .foot_item_media ul li{
 	list-style-type: none;
     margin-bottom: 0.25em;
-}
-
-ul{
-    display: block;
-     list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 
 .footer-link-content{
@@ -51,10 +37,6 @@ ul{
     content: "";
     display: inline;
     clear: both;
-}
-
-.logo_of_media ul li{
-
 }
 
 .foot_item_links {
@@ -84,7 +66,7 @@ ul{
     width: 100%;
 }
 
-a {
+.footer a {
     /*color: #000;*/
     text-decoration: none;
     background: transparent;
@@ -92,6 +74,7 @@ a {
 
 #fb, #twi, #inst{
 	font-size: 2em;
+	color: #565656;
 }
 
 .footer {
@@ -101,7 +84,7 @@ a {
     font-weight: 400;
 }
 
-li a{
+.footer-link-content ul li a{
     padding: 30px 0;
     color: #565656;
     font-weight: 500;
@@ -167,4 +150,9 @@ li a{
 .container{
     margin: 0;
     padding: 0;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
 }
