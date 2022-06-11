@@ -1,6 +1,32 @@
 {%extends "base.html"%}
-
+{% load static %}
 {% block title %}Main{% endblock %}
-
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/slider.css' %}">
+<!--<script defer src="{% static 'js/simple-adaptive-slider.min.js' %}"></script>-->
+{% endblock %}
 {% block body %}
+<!-- Основной блок слайдера -->
+    <div class="slider">
+
+        <!-- Первый слайд -->
+        <div class="item">
+            <img src="{% static 'img/img-slider/omori_banner1_71c5059d-da1e-4e64-b7e2-bf14d1545962_2048x.webp' %}">
+        </div>
+
+        <!-- Второй слайд -->
+        <div class="item hidden">
+            <img src="{% static 'img/img-slider/omori_preorder_banner_2048x.webp' %}">
+        </div>
+
+        <!-- Третий слайд -->
+        <div class="item hidden">
+            <img src="{% static 'img/img-slider/plush_preorder_banner_2048x.webp' %}">
+        </div>
+
+        <!-- Кнопки-стрелочки -->
+        <a class="previous" onclick="nextSlide()">&#10094;</a>
+        <a class="next" onclick="previousSlide()">&#10095;</a>
+    </div>
+<script src="{% static 'js/slider.js' %}"></script>
 {% endblock %}
