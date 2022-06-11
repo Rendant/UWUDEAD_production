@@ -23,3 +23,4 @@ class CollectionsAdmin(admin.ModelAdmin):
 
 admin.site.register(Goods, GoodsAdmin)
 admin.site.register(Collections, CollectionsAdmin)
+
