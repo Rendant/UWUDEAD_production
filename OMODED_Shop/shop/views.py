@@ -26,7 +26,10 @@ class Collection(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(Collection, self).get_context_data(**kwargs)
-        context['collection_slug'] = self.kwargs['collection_slug']
+        context.update({
+            'collection_slug': self.kwargs['collection_slug'],
+            'filtered_goodsNC': GoodsNC.objects.filter(collection__slug=self.kwargs['collection_slug']),
+        })
         return context
 
 
@@ -40,6 +43,13 @@ class Good(DetailView):
         category = self.kwargs.get('collection_slug', '')
         q = super().get_queryset()
         return q.filter(collection__slug=category)
+
+    def get_context_data(self, **kwargs):
+        context = super(Good, self).get_context_data(**kwargs)
+        context.update({
+            'filtered_goodsNC': GoodsNC.objects.filter(collection__slug=self.kwargs['collection_slug']),
+        })
+        return context
 
 
 def search(request):
