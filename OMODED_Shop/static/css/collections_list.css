@@ -1,0 +1,52 @@
+.homePage {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+}
+.homePage::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    margin-top: 15px;
+    position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333333;
+    opacity: .5;
+}
+.gridViewItems {
+    margin-left: 250px;
+    display: flex;
+    width: 262px;
+}
+.omoriImg {
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: -1000;
+}
+.gridSignature {
+    position: relative;
+    color: black;
+    text-align: center;
+    /*right: 160px;*/
+    display: block;
+    text-decoration: none;
+}
+.productVendor {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.productVendor a {
+    text-decoration: none;
+    color: black;
+}
+.gridViewItem {
+    padding-right: 100px;
+}
