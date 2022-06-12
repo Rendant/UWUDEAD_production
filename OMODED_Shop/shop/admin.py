@@ -3,9 +3,7 @@ from .models import *
 
 
 class GoodsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'description',
-                    'cost', 'size_s', 'size_m',
-                    'size_l', 'size_xl')
+    list_display = ('id', 'name', 'description', 'cost', 'is_available', 'is_clothes')
     filter_horizontal = ('collection', )
     list_display_links = ('id', 'name')
     search_fields = ('name', 'description')

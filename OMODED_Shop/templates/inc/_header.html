@@ -27,6 +27,8 @@
                             </li>
                         </ul>
                     </div>
+                    {% if user.is_authenticated %}
+
                     <div class="toggle-btnUser" onclick="openMenuUser()">
                         <li class="user-icon"></li>
                     </div>
@@ -52,6 +54,7 @@
                             <li class="cancel-btnUser" onclick="openMenuUser()"></li>
                         </ul>
                     </div>
+
                     <div class="toggle-btnCart" onclick="openMenuCart()">
                         <li class="buy-icon"></li>
                     </div>
