@@ -1,15 +1,67 @@
 {% extends 'base.html' %}
-{% block title %}Collection{% endblock %}
+{% comment %}
+<!--{% extends 'base.html' %}-->
+<!--{% block title %}Collection{% endblock %}-->
+<!--{% block body %}-->
+<!--    {% for good in filtered_goods %}-->
+<!--        <img src="{{ good.photo1.url }}" width="243" height="354">-->
+<!--        <a href="{% url 'good' collection_slug good.slug %}">{{ good.name }}</a>-->
+<!--        <br>-->
+<!--    {% endfor %}-->
+
+<!--{% endblock %}-->
+{% endcomment %}
+
+{% load static %}
+{% load mathfilters %}
+{% block title %}Collections{% endblock %}
 {% block body %}
+<div class="titleContent">
+    <h2 class="homePage">
+        COLLECTIONS s tovarami
+    </h2>
+</div>
+<!--    TYT KARTO4ki-->
+<div class="gridViewItems">
     {% for good in filtered_goods %}
-        <img src="{{ good.photo1.url }}" width="243" height="354">
-        <a href="{% url 'good' collection_slug good.slug %}">{{ good.name }}</a>
-        <br>
+    {% if forloop.counter|mod:4 == 0 %}
+    <div class="gridViewItem">
+        <div class="gridViewImg">
+            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
+        </div>
+        <div class="gridSignature">
+            <div>
+                <div class="productVendor">UWUDEAD</div>
+                <p class="productTitle">
+                    <a href="#">MR. TOVAR EPT</a>
+                </p>
+                <p class="productPrice">
+                    <span class="price">$ 100</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    {% else %}
+    <div class="gridViewItem">
+        <div class="gridViewImg">
+            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
+        </div>
+        <div class="gridSignature">
+            <div>
+                <div class="productVendor">UWUDEAD</div>
+                <p class="productTitle">
+                    <a href="#">MR. TOVAR EPT</a>
+                </p>
+                <p class="productPrice">
+                    <span class="price">$ 100</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
     {% endfor %}
-    {% for good in filtered_goodsNC %}
-        <img src="{{ good.photo1.url }}" width="243" height="354">
-        <a href="{% url 'good' collection_slug good.slug %}">{{ good.name }}</a>
-        <br>
-    {% endfor %}
+</div>
 {% endblock %}
+
 

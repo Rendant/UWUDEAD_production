@@ -1,7 +1,42 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load mathfilters %}
 {% block title %}Collections{% endblock %}
 {% block body %}
+    <div class="titleContent">
+        <h2 class="homePage">
+            COLLECTIONS
+        </h2>
+    </div>
+<!--    TYT KARTO4ki-->
+<div class="gridViewItems">
     {% for collection in object_list %}
-        <a href="{{ collection.get_absolute_url }}">{{ collection.name }}</a>
+    {% if forloop.counter|mod:4 == 0 %}
+    <div class="gridViewItem">
+        <div class="gridViewImg">
+            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
+        </div>
+        <div class="gridSignature">
+            <div>
+                <div class="productVendor">UWUDEAD</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    {% else %}
+    <div class="gridViewItem">
+        <div class="gridViewImg">
+            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
+        </div>
+        <div class="gridSignature">
+            <div>
+                <div class="productVendor">
+                    <a href="#">Omori</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
     {% endfor %}
+</div>
 {% endblock %}
