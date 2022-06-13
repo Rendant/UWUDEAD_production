@@ -14,24 +14,26 @@
     {% if forloop.counter|mod:4 == 0 %}
     <div class="gridViewItem">
         <div class="gridViewImg">
-            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
-        </div>
-        <div class="gridSignature">
-            <div>
-                <div class="productVendor">UWUDEAD</div>
-            </div>
-        </div>
-    </div>
-    <br>
-    {% else %}
-    <div class="gridViewItem">
-        <div class="gridViewImg">
-            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
+            <a href="{{ collection.get_absolute_url }}" class="omoriImg"><img src="{{ collection.photo }}" width="262" height="390"></a>
         </div>
         <div class="gridSignature">
             <div>
                 <div class="productVendor">
-                    <a href="#">Omori</a>
+                    <a href="{{ collection.get_absolute_url }}">{{ collection.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br>
+    {% else %}
+    <div class="gridViewItem">
+        <div class="gridViewImg">
+            <a href="{{ collection.get_absolute_url }}" class="omoriImg"><img src="{{ collection.photo }}" width="262" height="390"></a>
+        </div>
+        <div class="gridSignature">
+            <div>
+                <div class="productVendor">
+                    <a href="{{ collection.get_absolute_url }}">{{ collection.name }}</a>
                 </div>
             </div>
         </div>

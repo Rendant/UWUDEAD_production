@@ -12,7 +12,7 @@ def index(request):
     return render(request, template_name='shop/mainPage.html')
 
 
-class Collections(ListView):
+class CollectionsView(ListView):
     model = Collections
     template_name = 'shop/collections_list.html'
 
@@ -29,6 +29,7 @@ class Collection(ListView):
         context = super(Collection, self).get_context_data(**kwargs)
         context.update({
             'collection_slug': self.kwargs['collection_slug'],
+            'collection': Collections.objects.get(slug=self.kwargs['collection_slug']),
         })
         return context
 

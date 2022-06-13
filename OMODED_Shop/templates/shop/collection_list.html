@@ -14,11 +14,12 @@
 
 {% load static %}
 {% load mathfilters %}
-{% block title %}Collections{% endblock %}
+{% block title %}{{ collection.name }}{% endblock %}
+
 {% block body %}
 <div class="titleContent">
     <h2 class="homePage">
-        COLLECTIONS s tovarami
+        {{ collection.name }}
     </h2>
 </div>
 <!--    TYT KARTO4ki-->
@@ -27,16 +28,16 @@
     {% if forloop.counter|mod:4 == 0 %}
     <div class="gridViewItem">
         <div class="gridViewImg">
-            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
+            <a href="{% url 'good' collection_slug good.slug %}" class="omoriImg"><img src="{{ good.photo1.url }}" width="262" height="390"></a>
         </div>
         <div class="gridSignature">
             <div>
                 <div class="productVendor">UWUDEAD</div>
                 <p class="productTitle">
-                    <a href="#">MR. TOVAR EPT</a>
+                    <a href="{% url 'good' collection_slug good.slug %}">{{ good.name }}</a>
                 </p>
                 <p class="productPrice">
-                    <span class="price">$ 100</span>
+                    <span class="price">$ {{ good.cost }}</span>
                 </p>
             </div>
         </div>
@@ -45,16 +46,16 @@
     {% else %}
     <div class="gridViewItem">
         <div class="gridViewImg">
-            <a href="/omori" class="omoriImg"><img src="{% static 'img/img-collections/omplush.png' %}" width="262" height="390"></a>
+            <a href="{% url 'good' collection_slug good.slug %}" class="omoriImg"><img src="{{ good.photo1.url }}" width="262" height="390"></a>
         </div>
         <div class="gridSignature">
             <div>
                 <div class="productVendor">UWUDEAD</div>
                 <p class="productTitle">
-                    <a href="#">MR. TOVAR EPT</a>
+                    <a href="{% url 'good' collection_slug good.slug %}">{{ good.name }}</a>
                 </p>
                 <p class="productPrice">
-                    <span class="price">$ 100</span>
+                    <span class="price">$ {{ good.cost }}</span>
                 </p>
             </div>
         </div>
