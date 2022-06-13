@@ -1,7 +1,16 @@
 {% extends "base.html" %}
-
+{% block title%}Logged out{% endblock %}
 {% block body %}
-<p>Logged out!</p>
 
-<a href="{% url 'login'%}">Click here to login again.</a>
+<div class="logout">
+    <h2 class="Successful-logout">
+        Successful logout
+    </h2>
+    <div class="logout-logIn">
+        <a href="#" class="logout-link-logIn">Log In</a>
+    </div>
+    <div class="backMenu">
+        <a href="#" class="logout-link-backMenu">Back To Menu</a>
+    </div>
+</div>
 {% endblock %}

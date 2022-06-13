@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
 {% block body %}
 
 {% if form.errors %}
@@ -14,29 +17,34 @@
     <p>Please login to see this page.</p>
   {% endif %}
 {% endif %}
-
+<div>
+  <h2 class="loginTitle">
+    Login
+  </h2>
+</div>
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
-<table>
+<div>
+  <div class="userNameMain">
+    <span class="userName">{{ form.username }}</span>
+  </div>
 
-<tr>
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
-</tr>
-
-<tr>
-  <td>{{ form.password.label_tag }}</td>
-  <td>{{ form.password }}</td>
-</tr>
-</table>
-
-<input type="submit" value="login" />
+  <div class="userPasswordMain">
+    <span class="userPassword">{{ form.password }}</span>
+  </div>
+</div>
+<div class="loginBtnMain">
+  <input type="submit" value="Login" class="loginBtn"/>
+</div>
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
-
-<p><a href="{% url 'register' %}">Create account</a></p>
+<div class="registerLink">
+  <p><a href="{% url 'register' %}" class="register">Create account</a></p>
+</div>
 
 {# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+<div class="lostLink">
+  <p><a href="{% url 'password_reset' %}" class="lostPassword">Lost password?</a></p>
+</div>
 
 {% endblock %}

@@ -1,32 +1,52 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
 {% block title %}Sign up{% endblock %}
 
 {% block body %}
-    <h1>Create Account</h1>
+<div>
+    <h2 class="registerTitle">Create Account</h2>
+</div>
     <div>
-    	<h1>Sign Up</h1>
 	        <form method="POST">
 		        {% csrf_token %}
-{#                {{ register_form.username.label_tag }}#}
-                {{ register_form.username }}
+                <div class="userNameMain">
+                    <span class="userName">
+                        {{ register_form.username }}
+                    </span>
+                </div>
                 {{ register_form.username.errors }}
                 <br>
-{#                {{ register_form.email.label_tag }}#}
-                {{ register_form.email }}
+                <div class="userEmailMain">
+                    <span class="userEmail">
+                        {{ register_form.email }}
+                    </span>
+                </div>
                 {{ register_form.email.errors }}
                 <br>
-{#                {{ register_form.password1.label_tag }}#}
-                {{ register_form.password1 }}
-                {{ register_form.password1.help_text }}
+                <div class="userPasswordMain1">
+                    <span class="userPassword1">
+                        {{ register_form.password1 }}
+                    </span>
+                </div>
+<!--                {{ register_form.password1.help_text }}-->
                 {{ register_form.password1.errors }}
                 <br>
-{#                {{ register_form.password2.label_tag }}#}
-                {{ register_form.password2 }}
+                <div class="userPasswordMain2">
+                    <span class="userPassword2">
+                        {{ register_form.password2 }}
+                    </span>
+                </div>
                 {{ register_form.password2.errors }}
                 <br>
-                <button type="submit">Register</button>
+                <div class="registerBtnMain">
+                    <button type="submit" class="registerBtn">Register</button>
+                </div>
 	        </form>
-	    <p><a href="/">Return to store</a></p>
+        <div class="registerLink">
+            <p><a href="/" class="register">Return to store</a></p>
+        </div>
     </div>
 {% endblock %}

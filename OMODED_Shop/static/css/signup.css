@@ -1,0 +1,91 @@
+.registerTitle {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+}
+.registerTitle:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    margin-top: 15px;
+    position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333333;
+    opacity: .5;
+}
+.userNameMain {
+    text-align: center;
+    margin-top: 50px;
+}
+#id_username {
+    position: relative;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 350px;
+}
+.userEmailMain {
+    text-align: center;
+}
+#id_email {
+    position: relative;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 350px;
+}
+.userPasswordMain1 {
+    text-align: center;
+}
+#id_password1 {
+    position: relative;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 350px;
+}
+.userPasswordMain2 {
+    text-align: center;
+}
+#id_password2 {
+    position: relative;
+    height: 38px;
+    justify-content: left;
+    border: 1px solid #b3b3b3;
+    width: 350px;
+}
+.registerBtnMain {
+    text-align: center;
+    margin-top: 20px;
+}
+.registerBtn {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: #9f9f9f;
+    border: none;
+    width: 202px;
+    height: 38px;
+    cursor: pointer;
+}
+.registerBtn:hover {
+    background: black;
+}
+.registerLink {
+    text-align: center;
+    margin-top: 20px;
+}
+.register {
+    text-decoration: none;
+    color: black;
+}
+.register:hover {
+    color: #9f9f9f;
+}
