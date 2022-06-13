@@ -6,7 +6,6 @@ from django.http import JsonResponse
 from .forms import NewUserForm, LoginForm
 from django.contrib.auth import login
 from django.contrib.auth.views import LoginView
-from django.contrib import messages
 
 
 def index(request):
