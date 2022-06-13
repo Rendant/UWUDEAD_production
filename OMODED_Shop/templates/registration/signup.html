@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block body %}
+    <h1>Create Account</h1>
+    <div>
+    	<h1>Sign Up</h1>
+	        <form method="POST">
+		        {% csrf_token %}
+{#                {{ register_form.username.label_tag }}#}
+                {{ register_form.username }}
+                {{ register_form.username.errors }}
+                <br>
+{#                {{ register_form.email.label_tag }}#}
+                {{ register_form.email }}
+                {{ register_form.email.errors }}
+                <br>
+{#                {{ register_form.password1.label_tag }}#}
+                {{ register_form.password1 }}
+                {{ register_form.password1.help_text }}
+                {{ register_form.password1.errors }}
+                <br>
+{#                {{ register_form.password2.label_tag }}#}
+                {{ register_form.password2 }}
+                {{ register_form.password2.errors }}
+                <br>
+                <button type="submit">Register</button>
+	        </form>
+	    <p><a href="/">Return to store</a></p>
+    </div>
+{% endblock %}

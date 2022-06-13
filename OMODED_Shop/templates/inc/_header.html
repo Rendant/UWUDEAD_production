@@ -32,31 +32,34 @@
                             <li class="user-icon"></li>
                         </div>
                     {% else %}
-                        <div class="toggle-btnUser" onclick="openMenuUser()">
+                        <div class="toggle-btnUser" onclick="window.location.href = '/account/login/'">
                             <li class="user-icon"></li>
                         </div>
-                        <div id="sidebarUser">
-                            <ul>
-                                <li>Login</li>
-                                <li class="palo4ka-lol-2"></li>
-                                <li>
-                                    <div class="emailAndPassword">
-                                        <span>
-                                            <input type="email" name="q" placeholder="  Email" class="emailUser" autocomplete="off">
-                                            <input type="password" name="q" placeholder="  Password" class="passwordUser" autocomplete="off">
-                                            <input type="submit" class="SignIn" value="Sign In">
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="UserLinks-createAccount" href="/account/register">Create account</a>
-                                </li>
-                                <li>
-                                    <a class="UserLinks-ForgotYourPassword" href="#">Forgot your password?</a>
-                                </li>
-                                <li class="cancel-btnUser" onclick="openMenuUser()"></li>
-                            </ul>
-                        </div>
+{#                        <div class="toggle-btnUser" onclick="openMenuUser()">#}
+{#                            <li class="user-icon"></li>#}
+{#                        </div>#}
+{#                        <div id="sidebarUser">#}
+{#                            <ul>#}
+{#                                <li>Login</li>#}
+{#                                <li class="palo4ka-lol-2"></li>#}
+{#                                <li>#}
+{#                                    <div class="emailAndPassword">#}
+{#                                        <span>#}
+{#                                            <input type="email" name="q" placeholder="  Email" class="emailUser" autocomplete="off">#}
+{#                                            <input type="password" name="q" placeholder="  Password" class="passwordUser" autocomplete="off">#}
+{#                                            <input type="submit" class="SignIn" value="Sign In">#}
+{#                                        </span>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a class="UserLinks-createAccount" href="/account/register">Create account</a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a class="UserLinks-ForgotYourPassword" href="#">Forgot your password?</a>#}
+{#                                </li>#}
+{#                                <li class="cancel-btnUser" onclick="openMenuUser()"></li>#}
+{#                            </ul>#}
+{#                        </div>#}
                     {% endif %}
                     <div class="toggle-btnCart" onclick="openMenuCart()">
                         <li class="buy-icon"></li>
