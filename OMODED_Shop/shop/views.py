@@ -3,8 +3,9 @@ from .models import *
 from django.views.generic import ListView, DetailView
 from django.template.loader import render_to_string
 from django.http import JsonResponse
-from .forms import NewUserForm
+from .forms import NewUserForm, LoginForm
 from django.contrib.auth import login
+from django.contrib.auth.views import LoginView
 from django.contrib import messages
 
 
@@ -83,3 +84,7 @@ def register_request(request):
             return render(request=request, template_name="registration/signup.html", context={"register_form": form})
     form = NewUserForm()
     return render(request=request, template_name="registration/signup.html", context={"register_form": form})
+
+
+class LoginRequest(LoginView):
+    form_class = LoginForm

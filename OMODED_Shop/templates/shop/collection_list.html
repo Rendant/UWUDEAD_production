@@ -1,17 +1,4 @@
 {% extends 'base.html' %}
-{% comment %}
-<!--{% extends 'base.html' %}-->
-<!--{% block title %}Collection{% endblock %}-->
-<!--{% block body %}-->
-<!--    {% for good in filtered_goods %}-->
-<!--        <img src="{{ good.photo1.url }}" width="243" height="354">-->
-<!--        <a href="{% url 'good' collection_slug good.slug %}">{{ good.name }}</a>-->
-<!--        <br>-->
-<!--    {% endfor %}-->
-
-<!--{% endblock %}-->
-{% endcomment %}
-
 {% load static %}
 {% load mathfilters %}
 {% block title %}{{ collection.name }}{% endblock %}
