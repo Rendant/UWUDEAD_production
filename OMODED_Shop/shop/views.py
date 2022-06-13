@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
-from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
-from django.views.decorators.cache import cache_page
 from django.template.loader import render_to_string
 from django.http import JsonResponse
+from .forms import NewUserForm
+from django.contrib.auth import login
+from django.contrib import messages
 
 
 def index(request):
@@ -68,3 +69,16 @@ def search(request):
         return JsonResponse(data=data_dict, safe=False)
 
     return render(request, "shop/search_list.html", context=ctx)
+
+
+def register_request(request):
+    if request.method == "POST":
+        form = NewUserForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("home")
+        else:
+            return render(request=request, template_name="registration/signup.html", context={"register_form": form})
+    form = NewUserForm()
+    return render(request=request, template_name="registration/signup.html", context={"register_form": form})
