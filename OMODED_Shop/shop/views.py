@@ -3,8 +3,9 @@ from .models import *
 from django.views.generic import ListView, DetailView
 from django.template.loader import render_to_string
 from django.http import JsonResponse
-from .forms import NewUserForm
+from .forms import NewUserForm, LoginForm
 from django.contrib.auth import login
+from django.contrib.auth.views import LoginView
 from django.contrib import messages
 
 
@@ -12,7 +13,7 @@ def index(request):
     return render(request, template_name='shop/mainPage.html')
 
 
-class Collections(ListView):
+class CollectionsView(ListView):
     model = Collections
     template_name = 'shop/collections_list.html'
 
@@ -29,6 +30,7 @@ class Collection(ListView):
         context = super(Collection, self).get_context_data(**kwargs)
         context.update({
             'collection_slug': self.kwargs['collection_slug'],
+            'collection': Collections.objects.get(slug=self.kwargs['collection_slug']),
         })
         return context
 
@@ -82,3 +84,7 @@ def register_request(request):
             return render(request=request, template_name="registration/signup.html", context={"register_form": form})
     form = NewUserForm()
     return render(request=request, template_name="registration/signup.html", context={"register_form": form})
+
+
+class LoginRequest(LoginView):
+    form_class = LoginForm
