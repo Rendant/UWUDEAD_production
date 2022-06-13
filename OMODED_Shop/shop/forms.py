@@ -31,6 +31,7 @@ class LoginForm(AuthenticationForm):
 
     def __init__(self, *args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
+
         self.fields['username'].widget = forms.TextInput(attrs={'placeholder': ' Username'})
         self.fields['password'].widget = forms.PasswordInput(attrs={'placeholder': ' Password'})
 
