@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordResetForm
 from django.contrib.auth.models import User
 
 
@@ -31,5 +31,13 @@ class LoginForm(AuthenticationForm):
 
     def __init__(self, *args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
-        self.fields['username'].widget = forms.TextInput(attrs={'placeholder': 'Username'})
-        self.fields['password'].widget = forms.PasswordInput(attrs={'placeholder': 'Password'})
+
+        self.fields['username'].widget = forms.TextInput(attrs={'placeholder': ' Username'})
+        self.fields['password'].widget = forms.PasswordInput(attrs={'placeholder': ' Password'})
+
+
+class ResetForm(PasswordResetForm):
+
+    def __init__(self, *args, **kwargs):
+        super(ResetForm, self).__init__(*args, **kwargs)
+        self.fields['email'].widget = forms.EmailInput(attrs={'placeholder': ' Email'})
