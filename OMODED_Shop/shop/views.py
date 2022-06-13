@@ -3,10 +3,11 @@ from .models import *
 from django.views.generic import ListView, DetailView
 from django.template.loader import render_to_string
 from django.http import JsonResponse
-from .forms import NewUserForm, LoginForm
+from .forms import NewUserForm, LoginForm, ResetForm
 from django.contrib.auth import login
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, PasswordResetView
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -73,6 +74,12 @@ def search(request):
     return render(request, "shop/search_list.html", context=ctx)
 
 
+@login_required
+def profile(request):
+    return render(request=request, template_name='shop/profile.html')
+
+
+
 def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)
@@ -88,3 +95,8 @@ def register_request(request):
 
 class LoginRequest(LoginView):
     form_class = LoginForm
+
+
+class ResetRequest(PasswordResetView):
+    form_class = ResetForm
+
