@@ -6,7 +6,7 @@
     display: inline-block;
     margin-top: 30px;
 }
-.homePage::after {
+.homePage:after {
     content: "";
     display: block;
     height: 3px;
