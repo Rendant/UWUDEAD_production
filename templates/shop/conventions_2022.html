@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/conventions_2022.css' %}">
+{% endblock %}
+{% block title%}Conventions-2022{% endblock %}
+{% block body %}
+<div>
+    <h2 class="conventionsTitle">Conventions 2022</h2>
+</div>
+<div class="conventionsMain">
+    <div class="sakuraCon">
+        <a href="http://sakuracon.org/" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'img/img-conventions2022/Sakura-Con_logo.png' %}" width="240" height="240">
+        </a>
+    </div>
+    <div class="sakuraContent">
+        <div>
+            <strong>SAKURA-CON</strong>
+        </div>
+        <div>
+            <strong></strong>
+        </div>
+        <div>
+        <span>
+            <strong>Dates: </strong>
+            April 15-17
+        </span>
+        </div>
+        <div>
+        <span>
+            <strong>Location: </strong>
+            Seattle, WA
+        </span>
+        </div>
+        <div>
+            <strong>Booth: </strong>
+            Exhibitor's Hall, #925, 927
+        </div>
+    </div>
+</div>
+{% endblock %}

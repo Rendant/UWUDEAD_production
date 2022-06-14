@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/collaborations.css' %}">
+{% endblock %}
+{% block title%}Collaborations{% endblock %}
+{% block body %}
+<div>
+    <h2 class="collaborationsTitle">Collaborations</h2>
+</div>
+<hr class="collaborationsHr">
+<div class="collaborationsMain">
+    <strong>
+        UWUDEAD x hololive English
+    </strong>
+</div>
+<div class="collaborationsLink">
+    <a href="https://en.hololive.tv/" target="_blank" rel="noopener noreferrer">COVER Corporation </a>
+</div>
+<div class="collaborationsYear">
+    2021
+</div>
+<hr class="collaborationsHr">
+<div class="collaborationsImg">
+    <img src="{% static 'img/collaborations-img/211008_Omocat_0197_collab.webp' %}" width="757" height="505">
+</div>
+{% endblock %}

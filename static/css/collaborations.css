@@ -1,0 +1,54 @@
+.collaborationsTitle {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+}
+.collaborationsTitle:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    margin-top: 15px;
+    position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333333;
+    opacity: .5;
+}
+.collaborationsHr {
+    text-align: center;
+    justify-content: center;
+    clear: both;
+    border-top: solid #b3b3b3;
+    border-width: 1px 0 0;
+    height: 0;
+    width: 50%;
+    margin: 30px 25% 0 25%;
+}
+.collaborationsMain {
+    padding-top: 30px;
+    text-align: center;
+}
+.collaborationsMain strong {
+    font-weight: 700;
+}
+.collaborationsLink {
+    padding-top: 10px;
+    text-align: center;
+}
+.collaborationsLink a {
+    color: black;
+}
+.collaborationsYear {
+    padding-top: 10px;
+    text-align: center;
+}
+.collaborationsImg {
+    padding-top: 30px;
+    text-align: center;
+}
