@@ -22,7 +22,7 @@
     Login
   </h2>
 </div>
-<form method="post" action="{% url 'login' %}">
+<form method="post" action="{% url 'products:login' %}">
 {% csrf_token %}
 <div>
   <div class="userNameMain">
@@ -39,12 +39,12 @@
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 <div class="registerLink">
-  <p><a href="{% url 'register' %}" class="register">Create account</a></p>
+  <p><a href="{% url 'products:register' %}" class="register">Create account</a></p>
 </div>
 
 {# Assumes you setup the password_reset view in your URLconf #}
 <div class="lostLink">
-  <p><a href="{% url 'password_reset' %}" class="lostPassword">Lost password?</a></p>
+  <p><a href="{% url 'products:password_reset' %}" class="lostPassword">Lost password?</a></p>
 </div>
 
 {% endblock %}

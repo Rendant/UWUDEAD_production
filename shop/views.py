@@ -73,11 +73,6 @@ def search(request):
     return render(request, "shop/search_list.html", context=ctx)
 
 
-@login_required
-def profile(request):
-    return render(request=request, template_name='shop/profile.html')
-
-
 def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)

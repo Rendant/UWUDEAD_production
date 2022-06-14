@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% load static %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/profile.css' %}">
@@ -13,9 +14,33 @@
         Order History
     </h4>
     <p class="orders">
-        You haven't placed any orders yet.
+
+        <table>
+            <tr>
+                <th>Date Ordered</th>
+                <th>Reference Code</th>
+                <th>Items</th>
+                <th>Price</th>
+            </tr>
+        {% for order in my_orders %}
+            <tr>
+                <td>{{ order.date_ordered }}</td>
+                <td>{{ order.ref_code }}</td>
+                <td>
+        	        {% for item in order.items.all %}
+        		        {{ item.product.name }}
+      		        {% endfor %}
+      	        </td>
+                <td>${{ order.get_cart_total }}</td>
+
+            </tr>
+      {% empty %}
+            <tr>
+                <td> You haven't placed any orders yet.</td>
+            </tr>
+      {% endfor %}
+    </table>
     </p>
-    <hr>
     <div class="pagination"></div>
 </div>
 <div class="accountDetailsMain">
@@ -23,7 +48,7 @@
         Account Details
     </h4>
     <h4 class="userName">
-        TYT tip imya polzovatelya
+        {{ user.get_username }}
     </h4>
     <p class="country">
         Russian Federation
