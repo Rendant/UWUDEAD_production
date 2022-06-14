@@ -5,7 +5,7 @@
     position: relative;
     /* Центрируем по горизонтали: */
     margin: auto;
-    height: 300px;
+   /* height: 300px;*/
     z-index: -10000;
 }
 
@@ -14,7 +14,7 @@
     /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
     object-fit: contain;
     width: 100%;
-    height: 700px;
+    max-height: 700px;
     z-index: -10000;
 }
 .hidden {
