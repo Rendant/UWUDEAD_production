@@ -180,4 +180,4 @@ def update_transaction_records(request, token):
 
 def success(request, **kwargs):
     # a view signifying the transcation was successful
-    return render(request, 'shopping_cart/purchase_success.html', {})
+    return render(request, 'shopping_cart/purchase_success.html')

@@ -16,6 +16,11 @@ urlpatterns = [
     path('account/password_reset/', ResetRequest.as_view(), name='password_reset'),
     path('account/profile/', my_profile, name='profile'),
     path('cart/', include('cart.urls')),
+    path('pages/conventions_2022/', conventions, name='conventions'),
+    path('pages/collaborations/', collaborations, name='collaborations'),
+    path('pages/retailers/', retailers, name='retailers'),
+    path('pages/about/', about, name='about'),
+    path('community/faq/', faq, name='faq'),
 
 ]
 
