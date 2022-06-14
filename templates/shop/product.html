@@ -49,25 +49,21 @@
 						              </div>
 						            <!--{% endif %}-->
 
-
-
-
-
         							<label for="Quantity" class="quantity-selector product-sub-label">Quantity</label>
 
 									<div class="js-qty-wrapper">
 										<div class="js-qty">
 
-											<button type="button" class="js-qty__adjust js-qty__adjust--minus icon-fallback-text" data-id="" data-qty="0" onclick='min()'>
-												<i class="fa fa-minus" aria-hidden="true"></i>
-												<span class="fallback-text"></span>
+											<button type="button" class="js-qty__adjust js-qty__adjust--minus icon-fallback-text"  data-qty="0" id='btn-minus' onclick='quan_minus()'>
+											  <i class="fa fa-minus" aria-hidden="true"></i>
+											  <span class="fallback-text"></span>
 											</button>
 
-											<input type="text" class="js-qty__num" value="1" min="1" data-id="" aria-label="quantity" pattern="[0-9]*" name="quantity" id="Quantity" mm-min="1" mm-stock-max="NaN" max="3" mm-max="3" step="1" mm-step="1">
+											<input type="text" class="js-qty__num" value="1" min="1" aria-label="quantity" pattern="[0-9]*" name="quantity" id="Quantity" mm-min="1" mm-stock-max="NaN" max="3" mm-max="3" step="1" mm-step="1">
 
-											<button type="button" class="js-qty__adjust js-qty__adjust--plus icon-fallback-text" data-id="" data-qty="11" onclick="plus()">
-												<i class="fa fa-plus" aria-hidden="true"></i>
-												<span class="fallback-text"></span>
+											<button type="button" class="js-qty__adjust js-qty__adjust--plus icon-fallback-text"data-qty="11" id='btn-plus' onclick='quan_plus()'>
+											  <i class="fa fa-plus" aria-hidden="true"></i>
+											  <span class="fallback-text"></span>
 											</button>
 
 										</div>
@@ -138,3 +134,5 @@
 		</div>
 	</div>
 </main>
+<script src="{% static 'js/product.js' %}"></script>
+
