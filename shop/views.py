@@ -6,9 +6,7 @@ from django.http import JsonResponse
 from .forms import NewUserForm, LoginForm, ResetForm
 from django.contrib.auth import login
 from django.contrib.auth.views import LoginView, PasswordResetView
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
 
 
 def index(request):
@@ -78,7 +76,6 @@ def search(request):
 @login_required
 def profile(request):
     return render(request=request, template_name='shop/profile.html')
-
 
 
 def register_request(request):
