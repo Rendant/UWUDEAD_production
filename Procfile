@@ -1,0 +1,1 @@
+web: gunicorn OMODED_Shop.wsgi --log-file -
