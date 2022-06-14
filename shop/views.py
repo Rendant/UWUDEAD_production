@@ -37,7 +37,7 @@ class Collection(ListView):
 
 class Good(DetailView):
     model = Goods
-    template_name = 'shop/good_detail.html'
+    template_name = 'shop/product.html'
     context_object_name = 'good'
     slug_url_kwarg = 'good_slug'
 
@@ -45,6 +45,13 @@ class Good(DetailView):
         category = self.kwargs.get('collection_slug', '')
         q = super().get_queryset()
         return q.filter(collection__slug=category)
+
+    def get_context_data(self, **kwargs):
+        context = super(Good, self).get_context_data(**kwargs)
+        context.update({
+            'collection': Collections.objects.get(slug=self.kwargs['collection_slug']),
+        })
+        return context
 
 
 def search(request):

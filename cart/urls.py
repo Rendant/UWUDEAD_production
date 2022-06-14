@@ -6,7 +6,8 @@ from .views import (
     order_details,
     # checkout,
     update_transaction_records,
-    success
+    success,
+    cart_list
 )
 
 app_name = 'shopping_cart'
@@ -18,5 +19,6 @@ urlpatterns = [
     path('success/', success, name='purchase_success'),
     re_path(r'^item/delete/(?P<item_id>[-\w]+)/$', delete_from_cart, name='delete_item'),
     # path('checkout/', checkout, name='checkout'),
-    re_path(r'^update-transaction/(?P<token>[-\w]+)/$', update_transaction_records, name='update_records')
+    re_path(r'^update-transaction/(?P<token>[-\w]+)/$', update_transaction_records, name='update_records'),
+    path('view_cart/', cart_list, name='cart_list')
 ]

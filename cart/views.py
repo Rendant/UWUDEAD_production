@@ -3,10 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.template.loader import render_to_string
 from accounts.models import Profile
 from shop.models import Goods
-
+from django.http import JsonResponse
 from cart.extras import generate_order_id
 from cart.models import OrderItem, Order, Transaction
 
@@ -22,6 +22,31 @@ def get_user_pending_order(request):
         # get the only order in the list of filtered orders
         return order[0]
     return 0
+
+
+@login_required()
+def cart_list(request):
+    ctx = {}
+    user_profile = get_object_or_404(Profile, user=request.user)
+    cart_orders = Order.objects.filter(owner=user_profile, is_ordered=False)
+
+    ctx['cart_orders'] = cart_orders
+
+    is_ajax_request = request.headers.get("x-requested-with") == "XMLHttpRequest"
+
+    if is_ajax_request:
+        html = render_to_string(
+            template_name="inc/_cart.html",
+            context={"found_cart_orders_ajax": cart_orders}
+        )
+
+        data_dict = {"html_from_cart_view": html}
+
+        print(cart_orders)
+
+        return JsonResponse(data=data_dict, safe=False)
+
+    return render(request, "shop/cart_list.html", context=ctx)
 
 
 @login_required()
@@ -42,7 +67,7 @@ def add_to_cart(request, **kwargs):
 
     # show confirmation message and redirect back to the same page
     messages.info(request, "item added to cart")
-    return redirect(reverse('products:collection'))
+    return redirect('/')
 
 
 @login_required()

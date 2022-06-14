@@ -1,0 +1,5 @@
+{% for order in found_cart_orders_ajax %}
+    {% for item in order.get_cart_items %}
+        <li><a href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a></li>
+    {% endfor %}
+{% endfor %}
