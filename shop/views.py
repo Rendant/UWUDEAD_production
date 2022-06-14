@@ -86,7 +86,7 @@ def register_request(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("home")
+            return redirect("product:home")
         else:
             return render(request=request, template_name="registration/signup.html", context={"register_form": form})
     form = NewUserForm()
@@ -99,4 +99,24 @@ class LoginRequest(LoginView):
 
 class ResetRequest(PasswordResetView):
     form_class = ResetForm
+
+
+def conventions(request):
+    return render(request, 'shop/conventions_2022.html')
+
+
+def collaborations(request):
+    return render(request, 'shop/collaborations.html')
+
+
+def retailers(request):
+    return render(request, 'shop/retailers.html')
+
+
+def about(request):
+    return render(request, 'shop/about.html')
+
+
+def faq(request):
+    return render(request, 'shop/faq.html')
 
