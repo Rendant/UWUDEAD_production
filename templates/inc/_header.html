@@ -61,7 +61,7 @@
 {#                            </ul>#}
 {#                        </div>#}
                     {% endif %}
-                    <div class="toggle-btnCart" onclick="openMenuCart()">
+                    <div class="toggle-btnCart" id="cart_icon" onclick="openMenuCart()">
                         <li class="buy-icon"></li>
                     </div>
                     <div id="sidebarCart">
@@ -70,6 +70,13 @@
                             <li class="palo4ka-lol-3"></li>
 
                             <li class="cancel-btnCart" onclick="openMenuCart()"></li>
+                            {% if user.is_authenticated %}
+                                {% for order in cart_orders %}
+                                    {% for item in order.get_cart_items %}
+                                        <p>{{ item }}</p>
+                                    {% endfor %}
+                                {% endfor %}
+                            {% endif %}
                         </ul>
                     </div>
                 </ul>

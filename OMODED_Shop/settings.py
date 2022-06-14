@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'shop.apps.ShopConfig',
+    'accounts.apps.AccountsConfig',
+    'cart.apps.CartConfig',
     'pytils',
     'mathfilters',
 ]
@@ -139,3 +142,5 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1

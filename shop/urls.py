@@ -1,5 +1,8 @@
 from django.urls import path, include
 from .views import *
+from accounts.views import my_profile
+
+app_name = 'products'
 
 
 urlpatterns = [
@@ -11,7 +14,8 @@ urlpatterns = [
     path("account/register/", register_request, name="register"),
     path('account/login/', LoginRequest.as_view(), name='login'),
     path('account/password_reset/', ResetRequest.as_view(), name='password_reset'),
-    path('account/profile/', profile, name='profile'),
+    path('account/profile/', my_profile, name='profile'),
+    path('cart/', include('cart.urls')),
 
 ]
 

@@ -18,14 +18,14 @@
 		            	<div class="product-info_wrapper">
 
 		            		<div class="one-half">
-		            			<h4 class="collection-name">Collection name</h4>
+		            			<h4 class="collection-name">{{ collection.name }}</h4>
 		            		</div>
 
-		            		<h1 class="product-title">Prodoct-Title</h1>
+		            		<h1 class="product-title">{{ good.name }}</h1>
 
 		            		<div class="product-info_form">
-		            			<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="form-vertical">
-
+		            			<form action="/cart/add-to-cart/{{ good.pk }}/" method="GET" id="AddToCartForm" class="form-vertical">
+                                {% csrf_token %}
 
 						            <input type="hidden" name="properties[Product Type]" value="normal">
 
@@ -70,7 +70,7 @@
 									</div>
 
           <span id="ProductPrice" class="h2 js" itemprop="price" content="60">
-          	<span class="money">Price</span>
+          	<span class="money">$ {{ good.cost }}</span>
           </span>
 
           <button type="submit" name="add" id="AddToCart" class="btn spo-container">
@@ -112,20 +112,23 @@
 		            <div class="product-photo">
 
 		            	<div class="product-photo_wrapper">
-		            		<img src="hololive_hoodie.jpg" alt="">
+		            		<img src="{{ good.photo1.url }}" alt="">
 		            	</div>
-
-		            	<div class="product-photo_wrapper">
-		            		<img src="hololive_plushie.jpg" alt="">
-		            	</div>
-
-		            	<div class="product-photo_wrapper">
-		            		<img src="omori_hoodie.jpg" alt="">
-		            	</div>
-
-		            	<div class="product-photo_wrapper">
-		            		<img src="omori_plushie.png" alt="">
-		            	</div>
+                        {% if good.photo2.blank %}
+                            <div class="product-photo_wrapper">
+                                <img src="{{ good.photo2.url }}" alt="">
+                            </div>
+                        {% endif %}
+                        {% if good.photo3.blank %}
+                            <div class="product-photo_wrapper">
+                                <img src="{{ good.photo3.url }}" alt="">
+                            </div>
+                        {% endif %}
+                        {% if good.photo4.blank %}
+                            <div class="product-photo_wrapper">
+                                <img src="{{ good.photo4.url }}" alt="">
+                            </div>
+                        {% endif %}
 		        	</div>
 		        </div>
 
@@ -135,4 +138,4 @@
 	</div>
 </main>
 <script src="{% static 'js/product.js' %}"></script>
-
+{% endblock %}

@@ -26,7 +26,7 @@ class Goods(models.Model):
     def get_absolute_url(self):
         collection = [str(col) for col in self.collection.all()]
         collection_slug = slugify(collection[0])
-        return reverse('good', kwargs={'good_slug': self.slug, 'collection_slug': collection_slug})
+        return reverse('products:good', kwargs={'good_slug': self.slug, 'collection_slug': collection_slug})
 
     class Meta:
         verbose_name = 'Товар'
@@ -44,7 +44,7 @@ class Collections(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('collection', kwargs={'collection_slug': self.slug})
+        return reverse('products:collection', kwargs={'collection_slug': self.slug})
 
     class Meta:
         verbose_name = 'Коллекция'
