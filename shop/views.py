@@ -120,3 +120,4 @@ def about(request):
 def faq(request):
     return render(request, 'shop/faq.html')
 
+
