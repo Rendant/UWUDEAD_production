@@ -1,0 +1,140 @@
+{%extends "base.html"%}
+{% load static %}
+{% block title %}Main{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+{% endblock %}
+{% block body %}
+<main>
+	<div class="main">
+		<div class="container">
+		    <div class="row">
+
+
+
+		        <div class="col-md-5">
+
+		            <div class="product-info">
+		            	<div class="product-info_wrapper">
+
+		            		<div class="one-half">
+		            			<h4 class="collection-name">Collection name</h4>
+		            		</div>
+
+		            		<h1 class="product-title">Prodoct-Title</h1>
+
+		            		<div class="product-info_form">
+		            			<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="form-vertical">
+
+
+						            <input type="hidden" name="properties[Product Type]" value="normal">
+
+
+						            <!--{% if is_clothes %}-->
+						              <div class="selector-wrapper js">
+						                <label for="SingleOptionSelector-0">SIZE</label>
+						                <select class="needsclick form-control" id="SingleOptionSelector-0" autocomplete="off">
+
+						                    <option selected="" value="S">S</option>
+
+						                    <option value="M">M</option>
+
+						                    <option value="L">L</option>
+
+						                    <option value="XL">XL</option>
+
+						                    <option value="XXL">XXL</option>
+
+						                </select>
+						              </div>
+						            <!--{% endif %}-->
+
+
+
+
+
+        							<label for="Quantity" class="quantity-selector product-sub-label">Quantity</label>
+
+									<div class="js-qty-wrapper">
+										<div class="js-qty">
+
+											<button type="button" class="js-qty__adjust js-qty__adjust--minus icon-fallback-text" data-id="" data-qty="0" onclick='min()'>
+												<i class="fa fa-minus" aria-hidden="true"></i>
+												<span class="fallback-text"></span>
+											</button>
+
+											<input type="text" class="js-qty__num" value="1" min="1" data-id="" aria-label="quantity" pattern="[0-9]*" name="quantity" id="Quantity" mm-min="1" mm-stock-max="NaN" max="3" mm-max="3" step="1" mm-step="1">
+
+											<button type="button" class="js-qty__adjust js-qty__adjust--plus icon-fallback-text" data-id="" data-qty="11" onclick="plus()">
+												<i class="fa fa-plus" aria-hidden="true"></i>
+												<span class="fallback-text"></span>
+											</button>
+
+										</div>
+									</div>
+
+          <span id="ProductPrice" class="h2 js" itemprop="price" content="60">
+          	<span class="money">Price</span>
+          </span>
+
+          <button type="submit" name="add" id="AddToCart" class="btn spo-container">
+            <span id="AddToCartText">ADD TO CART</span>
+          </button><span class="atc-notification" style="display:none">You currently have a PREORDER product in your CART. You cannot mix this PREORDER product and other products in the same order.</span><div class="notify-wrapper spo-container"></div></form>
+		            		</div>
+
+		            		<div class="product-info_description">
+		            			<p class="product-description">
+		            				Original design by the artist OMOCAT based on their video game Screen-printed on a UNISEX Model is 6'2", and wearing size L.
+		            			</p>
+
+
+			            		<p class="washing-rules p1">Machine wash cold inside-out // With like colors</p>
+			            		<p class="washing-rules p1">Tumble dry low or hang dry // Do not iron</p>
+										</div>
+		            		<div class="SM-product-logo">
+		            			<div class="h5">SHARE</div>
+
+		            			<a href="#" class='share-facebook'>
+		            				<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+		            			</a>
+		            			<a href="#" class='share-twitter'>
+		            				<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+		            			</a>
+		            			<a href="#" class="share-pinterest">
+		            				<i class="fa fa-pinterest fa-lg" aria-hidden="true"></i>
+		            			</a>
+		            		</div>
+
+		            	</div>
+		            </div>
+		        </div>
+
+
+
+		        <div class="col-md-7">
+
+		            <div class="product-photo">
+
+		            	<div class="product-photo_wrapper">
+		            		<img src="hololive_hoodie.jpg" alt="">
+		            	</div>
+
+		            	<div class="product-photo_wrapper">
+		            		<img src="hololive_plushie.jpg" alt="">
+		            	</div>
+
+		            	<div class="product-photo_wrapper">
+		            		<img src="omori_hoodie.jpg" alt="">
+		            	</div>
+
+		            	<div class="product-photo_wrapper">
+		            		<img src="omori_plushie.png" alt="">
+		            	</div>
+		        	</div>
+		        </div>
+
+
+		    </div>
+		</div>
+	</div>
+</main>
