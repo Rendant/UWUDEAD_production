@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/retailers.css' %}">
+{% endblock %}
+{% block title%}Retails{% endblock %}
+{% block body %}
+<div>
+    <h2 class="retailersTitle">Retailers</h2>
+</div>
+<div class="retailersImg">
+    <img src="{% static 'img/img-retailers/E2D8Z0dVgAAVFTh-1.webp' %}" width="757" height="567">
+</div>
+<div class="retailersMain">
+    <div class="retailersPark">
+        <strong>PARK</strong>
+    </div>
+    <div class="retailersEm">
+        <em>HARAJUKU</em>
+    </div>
+</div>
+<div class="retailers">
+    〒150-0001 Tokyo, Shibuya City, Jingumae,<br>
+    3 Chome-15-8 Chambre 15 Room 207
+</div>
+{% endblock %}

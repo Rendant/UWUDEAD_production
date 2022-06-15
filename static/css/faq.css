@@ -1,0 +1,27 @@
+.faq-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 300px;
+}
+.faqMain {
+    padding: 16px;
+}
+.faqTitle {
+    font-weight: 400;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+.faqSearchMain {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 30px 50px;
+}
+.faqSearch {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 99%;
+    padding: 10px 10px;
+}

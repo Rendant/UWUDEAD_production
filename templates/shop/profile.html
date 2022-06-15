@@ -16,12 +16,7 @@
     <p class="orders">
 
         <table>
-            <tr>
-                <th>Date Ordered</th>
-                <th>Reference Code</th>
-                <th>Items</th>
-                <th>Price</th>
-            </tr>
+
         {% for order in my_orders %}
             <tr>
                 <td>{{ order.date_ordered }}</td>
@@ -41,6 +36,7 @@
       {% endfor %}
     </table>
     </p>
+    <hr>
     <div class="pagination"></div>
 </div>
 <div class="accountDetailsMain">
@@ -55,4 +51,6 @@
     </p>
     <a href="/account/logout" class="logoutBtn">Log out</a>
 </div>
+
+
 {% endblock %}

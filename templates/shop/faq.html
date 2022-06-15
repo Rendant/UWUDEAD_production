@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/faq.css' %}">
+{% endblock %}
+{% block title%}FAQ{% endblock %}
+{% block body %}
+<div class="faq-content">
+    <div class="faqMain">
+        <h1 class="faqTitle">
+            Frequently Asked Questions
+        </h1>
+        <div class="faqSearchMain">
+            <div>
+                <span>
+                    <input autocomplete="off" class="faqSearch" placeholder="Start typing" type="text">
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
