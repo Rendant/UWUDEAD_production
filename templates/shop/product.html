@@ -73,8 +73,9 @@
           	<span class="money">$ {{ good.cost }}</span>
           </span>
 
-          <button type="submit" name="add" id="AddToCart" class="btn spo-container">
-            <span id="AddToCartText">ADD TO CART</span>
+          <button type="submit" name="add" id="AddToCart" class="btn spo-container" {% if not user.is_authenticated %}disabled="disabled"{% endif %}>
+            {% if user.is_authenticated %}<span id="AddToCartText">ADD TO CART</span>{% endif %}
+            {% if not user.is_authenticated %}<a href="/account/login/"><span id="AddToCartText">PLEASE LOGIN TO BUY</span></a>{% endif %}
           </button><span class="atc-notification" style="display:none">You currently have a PREORDER product in your CART. You cannot mix this PREORDER product and other products in the same order.</span><div class="notify-wrapper spo-container"></div></form>
 		            		</div>
 

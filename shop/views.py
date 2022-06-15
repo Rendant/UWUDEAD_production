@@ -77,7 +77,7 @@ def search(request):
 
         return JsonResponse(data=data_dict, safe=False)
 
-    return render(request, "shop/search_list.html", context=ctx)
+    return render(request, "shop/search.html", context=ctx)
 
 
 def register_request(request):
