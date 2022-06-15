@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+{% load static %}
+{% block title %}Main{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+{% block body %}
+	<main>
+		<div class="main">
+			<div class="main-wrapper">
+				<div class="search-title">
+					<h1 class="title-search-page">Lookin' for something?</h1>
+				</div>
+				<div class="container">
+					<div class="row">											
+						<div class="col-xs-12">
+							<div class="search-group">
+								<form action="/search" method="get" class="search-form search-bar" role="search">
+									<input type="search" name="q" value="" placeholder="Search our store" class="search-input" aria-label="Search our store">						    	
+							    	<span class="input-group-btn">
+								    	<button type="submit" class="btn search-btn icon-fallback-text">
+								    		<i class="fa fa-search"></i>
+								      		<span class="fallback-text">Search</span>
+								    	</button>
+								  	</span>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
