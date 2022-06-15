@@ -86,7 +86,7 @@ def register_request(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("product:home")
+            return redirect("products:home")
         else:
             return render(request=request, template_name="registration/signup.html", context={"register_form": form})
     form = NewUserForm()
