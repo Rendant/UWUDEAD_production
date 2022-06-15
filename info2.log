@@ -1,0 +1,56 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Forbidden (CSRF token from POST incorrect.): /admin/login/
+"POST /admin/login/?next=/admin/ HTTP/1.1" 403 2560
+"GET / HTTP/1.1" 200 14870
+"GET /static/js/header.js HTTP/1.1" 304 0
+"GET /static/css/mainPage.css HTTP/1.1" 304 0
+"GET /static/css/footer.css HTTP/1.1" 304 0
+"GET /static/css/logged_out.css HTTP/1.1" 304 0
+"GET /static/css/collections_list.css HTTP/1.1" 304 0
+"GET /static/css/collection_list.css HTTP/1.1" 304 0
+"GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+"GET /static/css/slider.css HTTP/1.1" 304 0
+"GET /static/js/jquery.js HTTP/1.1" 304 0
+"GET /static/js/slider.js HTTP/1.1" 304 0
+"GET /static/img/img-slider/plush_preorder_banner_2048x.webp HTTP/1.1" 304 0
+"GET /static/img/img-slider/omori_preorder_banner_2048x.webp HTTP/1.1" 304 0
+"GET /static/img/img-slider/omori_banner1_71c5059d-da1e-4e64-b7e2-bf14d1545962_2048x.webp HTTP/1.1" 304 0
+"GET /static/img/logo.jpg HTTP/1.1" 304 0
+"GET /static/js/ajax_search.js HTTP/1.1" 304 0
+"GET /static/img/search.svg HTTP/1.1" 304 0
+"GET /static/img/shopping-cart.svg HTTP/1.1" 304 0
+"GET /static/img/user.svg HTTP/1.1" 304 0
+"GET /static/img/search-button.svg HTTP/1.1" 304 0
+"GET /static/img/cancel.svg HTTP/1.1" 304 0
+"GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+"GET /cart/view_cart/ HTTP/1.1" 200 27
+"GET /admin/ HTTP/1.1" 200 10684
+"GET /admin/ HTTP/1.1" 200 10684
+"GET /admin/logout/ HTTP/1.1" 200 14177
+"GET /cart/view_cart/ HTTP/1.1" 302 0
+"GET /static/img/user-hover.svg HTTP/1.1" 304 0
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/cart/view_cart/ HTTP/1.1" 404 5292
+"GET / HTTP/1.1" 200 14831
+"GET /cart/view_cart/ HTTP/1.1" 302 0
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/cart/view_cart/ HTTP/1.1" 404 5292
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 2302
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 2570
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 2570
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 2570
+C:\Users\yauro\UWUDEAD_Shop\OMODED_Shop\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 10684
+"GET /admin/logout/ HTTP/1.1" 200 14177
+"GET /cart/view_cart/ HTTP/1.1" 302 0
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/cart/view_cart/ HTTP/1.1" 404 5292
+"GET /static/img/shopping-cart-hover.svg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 14831
+"GET /cart/view_cart/ HTTP/1.1" 302 0
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/cart/view_cart/ HTTP/1.1" 404 5292
