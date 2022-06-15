@@ -42,8 +42,6 @@ def cart_list(request):
 
         data_dict = {"html_from_cart_view": html}
 
-        print(cart_orders)
-
         return JsonResponse(data=data_dict, safe=False)
 
     return render(request, "shop/cart_list.html", context=ctx)
