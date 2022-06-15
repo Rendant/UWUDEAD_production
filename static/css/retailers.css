@@ -1,0 +1,38 @@
+.retailersTitle {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+}
+.retailersTitle:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    margin-top: 15px;
+    position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333333;
+    opacity: .5;
+}
+.retailersImg {
+    padding-top: 30px;
+    text-align: center;
+}
+.retailersPark {
+    padding-top: 10px;
+    text-align: center;
+}
+.retailersEm {
+    padding-top: 10px;
+    text-align: center;
+}
+.retailers {
+    padding-top: 20px;
+    text-align: center;
+}

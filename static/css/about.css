@@ -1,0 +1,42 @@
+.aboutTitle {
+    font-size: 26px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+}
+.aboutTitle:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: auto;
+    margin-top: 15px;
+    position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333333;
+    opacity: .5;
+}
+.about {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.aboutContentMain {
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+}
+.aboutContent a {
+    color: black;
+}
+.aboutContentImg {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.aboutContent {
+    text-align: center;
+    margin: 0 0 15px;
+}

@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+{% block title%}About{% endblock %}
+{% block body %}
+<div>
+    <h2 class="aboutTitle">About UWUDEAD</h2>
+</div>
+<div class="about">
+    <div class="aboutContentMain">
+        <p class="aboutContent">
+            <img src="{% static 'img/about-img/work_polaroid_480x480.webp' %}" width="304" height="480" class="aboutContentImg">
+        </p>
+        <p class="aboutContent"> UWUDEAD, LLC. is a L.A.-based art studio, founded in 2014 by the artist
+            <strong>
+                <a href="/">UWUDEAD</a>
+            </strong>
+        </p>
+        <p class="aboutContent">
+            It is made up of a small but intimate group of creatives who work on UWUDEAD’s various projects together.
+        </p>
+        <p class="aboutContent">
+            In 2020, UWUDEAD, LLC. released the hit indie video game,
+            <strong>
+                <a href="/collections/omori">OMORI</a>
+            </strong>
+            , gaining recognition as an indie game studio. Additionally,
+            <strong>
+                <a href="/apparel">UWUDEAD</a>
+            </strong>
+            is an apparel and merchandise brand that creates quality goods with their own artistic flair.
+        </p>
+        <p class="aboutContent">
+            As a team of avid collectors and fanatics with a wide range of interests in art, fashion, music, animation, 3D figures, trading card games, and video games, UWUDEAD, LLC. strives to create thoughtful products the team would want to own themselves. Simply put, we make what we love!
+        </p>
+    </div>
+</div>
+{% endblock %}
