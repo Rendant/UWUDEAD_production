@@ -29,16 +29,30 @@
 					</div>
                     <div class="search-result">
                             {% if found_goods %}
-                                <ul>
-                                    {% for good in found_goods %}
-                                        <li>
-                                            <a href="{{ good.get_absolute_url }}"><img src="{{ good.photo1.url }}" alt=""></a><a href="{{ good.get_absolute_url }}">{{ good.name }}</a>
-                                            <p>{{ good.cost }}</p>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% else %}
-                                <p>Nothing found...</p>
+									<div class="search-result-item_wrapper">
+										{% for good in found_goods %}
+											<div class="search-result-item">
+												<div class="row">
+													<div class="col-xs-4 search-image-wrap">
+														<a href="{{ good.get_absolute_url }}">
+															<img class='search-result_img' src="{{ good.photo1.url }}" alt="">
+														</a>
+													</div>
+
+													<div class="col-xs-8">
+														<div class="search-info">
+															<a class="search-result-title" href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+															<p class="search-result-price">{{ good.cost }}$</p>
+														</div>
+													</div>
+
+												</div>
+											</div>
+											<hr>
+										{% endfor %}
+									</div>
+								{% else %}
+								<p>Nothing found...</p>
                             {% endif %}
                     </div>
 				</div>
