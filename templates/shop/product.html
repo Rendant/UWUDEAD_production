@@ -115,19 +115,29 @@
 		            	<div class="product-photo_wrapper">
 		            		<img src="{{ good.photo1.url }}" alt="">
 		            	</div>
-                        {% if good.photo2.blank %}
+                        {% if good.photo2 %}
                             <div class="product-photo_wrapper">
                                 <img src="{{ good.photo2.url }}" alt="">
                             </div>
                         {% endif %}
-                        {% if good.photo3.blank %}
+                        {% if good.photo3 %}
                             <div class="product-photo_wrapper">
                                 <img src="{{ good.photo3.url }}" alt="">
                             </div>
                         {% endif %}
-                        {% if good.photo4.blank %}
+                        {% if good.photo4 %}
                             <div class="product-photo_wrapper">
                                 <img src="{{ good.photo4.url }}" alt="">
+                            </div>
+                        {% endif %}
+                        {% if good.photo5 %}
+                            <div class="product-photo_wrapper">
+                                <img src="{{ good.photo5.url }}" alt="">
+                            </div>
+                        {% endif %}
+                        {% if good.photo6 %}
+                            <div class="product-photo_wrapper">
+                                <img src="{{ good.photo6.url }}" alt="">
                             </div>
                         {% endif %}
 		        	</div>
