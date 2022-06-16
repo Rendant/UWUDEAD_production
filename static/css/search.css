@@ -95,3 +95,21 @@
 .fallback-text{
 	display: none;
 }
+
+.search-result{
+    margin-top:50px;
+}
+
+.search-result-item{
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.search-result_img{
+    max-width:100%;
+    height:auto;
+}
