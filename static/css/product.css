@@ -161,6 +161,7 @@ option{
 	cursor: pointer;
 }
 
+
 #AddToCart:hover{
 	transition: all 0.5s ease .1s;
 	background-color: #ff5353;
