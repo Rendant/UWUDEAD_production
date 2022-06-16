@@ -1,0 +1,28 @@
+.ajx-search-result{
+    margin: 50px 0 30px 20px;
+
+}
+
+.ajx-search-result_img{
+    max-width:100%;
+}
+
+.ajx-search-name-price{
+    height:80%;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.ajx-search-name{
+    text-decoration: none;
+    font-size: 3em;
+    color:#333;
+}
+
+.ajx-search-price{
+    font-size: 2em;
+    color:#333;
+}
