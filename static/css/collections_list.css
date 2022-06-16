@@ -53,3 +53,6 @@
     text-decoration: none;
     color: black;
 }
+.gridViewImg a {
+    z-index: 1000;
+}
