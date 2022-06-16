@@ -33,15 +33,17 @@
 										{% for good in found_goods %}
 											<div class="search-result-item">
 												<div class="row">
-													<div class="col-xs-4">
+													<div class="col-xs-4 search-image-wrap">
 														<a href="{{ good.get_absolute_url }}">
 															<img class='search-result_img' src="{{ good.photo1.url }}" alt="">
 														</a>
 													</div>
 
 													<div class="col-xs-8">
-														<a href="{{ good.get_absolute_url }}">{{ good.name }}</a>
-														<p>{{ good.cost }}</p>
+														<div class="search-info">
+															<a class="search-result-title" href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+															<p class="search-result-price">{{ good.cost }}$</p>
+														</div>
 													</div>
 
 												</div>

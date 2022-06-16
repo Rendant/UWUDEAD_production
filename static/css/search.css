@@ -102,7 +102,6 @@
 
 .search-result-item{
     box-sizing: border-box;
-    float: left;
     min-height: 1px;
     padding-left: 30px;
     vertical-align: top;
@@ -112,4 +111,28 @@
 .search-result_img{
     max-width:100%;
     height:auto;
+}
+
+hr{
+    margin:25px;
+}
+
+.search-info{
+    height:80%;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.search-info a{
+    text-decoration: none;
+    font-size: 3em;
+    color:#333;
+}
+
+.search-info p{
+    font-size: 2em;
+    color:#333;
 }
