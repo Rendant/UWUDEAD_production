@@ -7,7 +7,7 @@ class Goods(models.Model):
     name = models.CharField(max_length=50, unique=True,
                             verbose_name='Наименование')
     slug = models.SlugField(unique=True)
-    description = models.TextField(verbose_name='Описание')
+    description = models.TextField(blank=True, verbose_name='Описание')
     cost = models.DecimalField(max_digits=6, decimal_places=2,
                                verbose_name='Цена')
     collection = models.ManyToManyField('Collections', verbose_name='Коллекция')
