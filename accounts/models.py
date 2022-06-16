@@ -7,7 +7,6 @@ from shop.models import Goods
 
 class Profile(models.Model):
     user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)
-    products = models.ManyToManyField(Goods, blank=True)
 
     def __str__(self):
         return self.user.username

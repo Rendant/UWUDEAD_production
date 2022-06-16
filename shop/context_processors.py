@@ -1,7 +1,6 @@
 from django.shortcuts import get_object_or_404
 from accounts.models import Profile
 from cart.models import Order
-from django.contrib.auth import get_user_model
 
 
 def cart_processor(request):
