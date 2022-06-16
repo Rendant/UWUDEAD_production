@@ -1,5 +1,22 @@
 {% if found_goods_ajax %}
         {% for good in found_goods_ajax %}
-            <li><a href="{{ good.get_absolute_url }}">{{ good.name }}</a></li>
+            											<div class="search-result-item">
+												<div class="row">
+													<div class="col-xs-4 search-image-wrap">
+														<a href="{{ good.get_absolute_url }}">
+															<img class='search-result_img' src="{{ good.photo1.url }}" alt="">
+														</a>
+													</div>
+
+													<div class="col-xs-8">
+														<div class="search-info">
+															<a class="search-result-title" href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+															<p class="search-result-price">{{ good.cost }}$</p>
+														</div>
+													</div>
+
+												</div>
+											</div>
+											<hr>
         {% endfor %}
 {% endif %}
