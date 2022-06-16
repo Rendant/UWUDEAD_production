@@ -32,38 +32,20 @@ def cart_list(request):
 
     ctx['cart_orders'] = cart_orders
 
-    is_ajax_request = request.headers.get("x-requested-with") == "XMLHttpRequest"
-
-    if is_ajax_request:
-        html = render_to_string(
-            template_name="inc/_cart.html",
-            context={"found_cart_orders_ajax": cart_orders}
-        )
-
-        data_dict = {"html_from_cart_view": html}
-
-        return JsonResponse(data=data_dict, safe=False)
-
     return render(request, "shop/cart_list.html", context=ctx)
 
 
 @login_required()
 def add_to_cart(request, **kwargs):
-    # get the user profile
     user_profile = get_object_or_404(Profile, user=request.user)
-    # filter products by id
     product = Goods.objects.filter(id=kwargs.get('item_id', "")).first()
-    # create orderItem of the selected product
     order_item, status = OrderItem.objects.get_or_create(product=product)
-    # create order associated with the user
     user_order, status = Order.objects.get_or_create(owner=user_profile, is_ordered=False)
     user_order.items.add(order_item)
     if status:
-        # generate a reference code
         user_order.ref_code = generate_order_id()
         user_order.save()
 
-    # show confirmation message and redirect back to the same page
     messages.info(request, "item added to cart")
     return redirect('/')
 
