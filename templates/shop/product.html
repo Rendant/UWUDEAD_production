@@ -1,6 +1,6 @@
 {%extends "base.html"%}
 {% load static %}
-{% block title %}Main{% endblock %}
+{% block title %}Product{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/product.css' %}">
 {% endblock %}
@@ -81,13 +81,15 @@
 
 		            		<div class="product-info_description">
 		            			<p class="product-description">
-		            				Original design by the artist OMOCAT based on their video game Screen-printed on a UNISEX Model is 6'2", and wearing size L.
+                                    {{ good.description|linebreaks }}
+                                    {% if good.is_clothes %}Original design by the artist OMOCAT based on their video game OMORI. Screen-printed on a UNISEX 50% cotton 50% polyester hoodie. Model is 5'8", and wearing size L. {% endif %}
 		            			</p>
 
-
-			            		<p class="washing-rules p1">Machine wash cold inside-out // With like colors</p>
-			            		<p class="washing-rules p1">Tumble dry low or hang dry // Do not iron</p>
-										</div>
+                                {% if good.is_clothes %}
+			            		    <p class="washing-rules p1">Machine wash cold inside-out // With like colors</p>
+			            		    <p class="washing-rules p1">Tumble dry low or hang dry // Do not iron</p>
+                                {% endif %}
+                            </div>
 		            		<div class="SM-product-logo">
 		            			<div class="h5">SHARE</div>
 
