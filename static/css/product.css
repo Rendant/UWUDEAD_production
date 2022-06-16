@@ -15,12 +15,7 @@
    background: #fcfcfc;
    padding: 40px;
    position: relative;
-   text-align: center;
-   z-index: -1000;
-}
-
-.product-info_description{
-	text-align: center;
+   z-index: 100;
 }
 
 @media only screen and (min-width: 1200px){
@@ -53,7 +48,7 @@
 
 .product-info_form{
 	margin-bottom: 40px;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 #AddToCartForm .selector-wrapper label{
@@ -67,7 +62,7 @@
 	display: inline-block;
 	font-size: 16px;
 	color: #333;
-	text-align: center;
+	/*text-align: center;*/
 	min-width: 30%;
 	margin-bottom: 15px;
 	border: 1px solid #b3b3b3;

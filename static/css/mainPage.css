@@ -5,6 +5,7 @@
 }
 .nav li {
     margin-bottom: 10px;
+    z-index:500;
 }
 .header {
     display: flex;
