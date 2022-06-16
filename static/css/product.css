@@ -156,7 +156,10 @@ option{
 	cursor: pointer;
 }
 
-
+#AddToCart a{
+    text-decoration:none;
+    color: #fff;
+}
 #AddToCart:hover{
 	transition: all 0.5s ease .1s;
 	background-color: #ff5353;
@@ -201,7 +204,7 @@ option{
 	z-index:-1000;
 }
 
-.product-photo{
+.product-photos{
 	text-align: center;
 	margin: 0 auto;
 	z-index: -1000;
