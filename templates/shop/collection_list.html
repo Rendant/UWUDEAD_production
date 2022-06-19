@@ -2,7 +2,6 @@
 {% load static %}
 {% load mathfilters %}
 {% block title %}{{ collection.name }}{% endblock %}
-
 {% block body %}
 <div class="titleContent">
     <h2 class="homePage">
@@ -10,46 +9,30 @@
     </h2>
 </div>
 <!--    TYT KARTO4ki-->
-<div class="gridViewItems">
-    {% for good in filtered_goods %}
-    {% if forloop.counter|mod:4 == 0 %}
-    <div class="gridViewItem">
-        <div class="gridViewImg">
-            <a href="{% url 'products:good' collection_slug good.slug %}" class="omoriImg"><img src="{{ good.photo1.url }}" width="262" height="390"></a>
-        </div>
-        <div class="gridSignature">
-            <div>
-                <div class="productVendor">UWUDEAD</div>
-                <p class="productTitle">
-                    <a href="{% url 'products:good' collection_slug good.slug %}">{{ good.name }}</a>
-                </p>
-                <p class="productPrice">
-                    <span class="price">$ {{ good.cost }}</span>
-                </p>
+<div class="container">
+    <div class="row">
+        {% for good in filtered_goods %}
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="gridViewItem">
+                <div class="gridViewImg">
+                    <a href="{% url 'products:good' collection_slug good.slug %}" class="omoriImg"><img class='product-photo' src="{{ good.photo1.url }}"></a>
+                </div>
+                <div class="gridSignature">
+                    <div>
+                        <div class="productVendor">UWUDEAD</div>
+                        <p class="productTitle">
+                            <a href="{% url 'products:good' collection_slug good.slug %}">{{ good.name }}</a>
+                        </p>
+                        <p class="productPrice">
+                            <span class="price">$ {{ good.cost }}</span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    <br>
-    {% else %}
-    <div class="gridViewItem">
-        <div class="gridViewImg">
-            <a href="{% url 'products:good' collection_slug good.slug %}" class="omoriImg"><img src="{{ good.photo1.url }}" width="262" height="390"></a>
-        </div>
-        <div class="gridSignature">
-            <div>
-                <div class="productVendor">UWUDEAD</div>
-                <p class="productTitle">
-                    <a href="{% url 'products:good' collection_slug good.slug %}">{{ good.name }}</a>
-                </p>
-                <p class="productPrice">
-                    <span class="price">$ {{ good.cost }}</span>
-                </p>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-    {% endfor %}
 </div>
-{% endblock %}
 
+{% endblock %}
 

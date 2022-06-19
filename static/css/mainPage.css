@@ -10,6 +10,7 @@
 }
 .nav li {
     margin-bottom: 10px;
+    z-index:500;
 }
 .header {
     display: flex;
@@ -28,7 +29,7 @@
 
 .header-links {
     position: relative;
-    left: 400px;
+    left: 9vw;
     justify-content: end;
     text-align: center;
     list-style: none;
@@ -110,6 +111,7 @@
 
 #sidebarSearch.active {
     right: 0px;
+    z-index: 600;
 }
 
 /*#sidebarSearch.active::after {*/
@@ -242,6 +244,7 @@
 
 #sidebarUser.active {
     right: 0px;
+    z-index: 600;
 }
 /*#sidebarUser.active::after {*/
 /*    content:'';*/
@@ -384,6 +387,7 @@
 
 #sidebarCart.active {
     right: 0px;
+    z-index: 600;
 }
 /*#sidebarCart.active::after {*/
 /*    content:'';*/
@@ -607,7 +611,6 @@
 }
 .site-dropDownMenuInfo {
     list-style-type: none;
-
     position: absolute;
     z-index: 4;
     left: 80%;

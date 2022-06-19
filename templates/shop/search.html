@@ -1,0 +1,62 @@
+{%extends "base.html"%}
+{% load static %}
+{% block title %}Search{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+{% block body %}
+	<main>
+		<div class="main">
+			<div class="main-wrapper">
+				<div class="search-title">
+					<h1 class="title-search-page">Lookin' for something?</h1>
+				</div>
+				<div class="container">
+					<div class="row">											
+						<div class="col-xs-12">
+							<div class="search-group">
+								<form action="/search" method="get" class="search-form search-bar" role="search">
+									<input type="search" name="q" value="" placeholder="Search our store" class="search-input" aria-label="Search our store">						    	
+							    	<span class="input-group-btn">
+								    	<button type="submit" class="btn search-btn icon-fallback-text">
+								    		<i class="fa fa-search"></i>
+								      		<span class="fallback-text">Search</span>
+								    	</button>
+								  	</span>
+								</form>
+							</div>
+						</div>
+					</div>
+                    <div class="search-result">
+                            {% if found_goods %}
+									<div class="search-result-item_wrapper">
+										{% for good in found_goods %}
+											<div class="search-result-item">
+												<div class="row">
+													<div class="col-xs-4 search-image-wrap">
+														<a href="{{ good.get_absolute_url }}">
+															<img class='search-result_img' src="{{ good.photo1.url }}" alt="">
+														</a>
+													</div>
+
+													<div class="col-xs-8">
+														<div class="search-info">
+															<a class="search-result-title" href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+															<p class="search-result-price">{{ good.cost }}$</p>
+														</div>
+													</div>
+
+												</div>
+											</div>
+											<hr>
+										{% endfor %}
+									</div>
+								{% else %}
+								<p>Nothing found...</p>
+                            {% endif %}
+                    </div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

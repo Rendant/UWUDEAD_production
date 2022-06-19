@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Inconsolata, sans-serif;
+    line-height: 1.4;
+}
+
+.main-wrapper{
+	padding-top: 30px;
+}
+
+.search-title{
+	position: relative;
+	margin-bottom: 55px;
+}
+
+
+.title-search-page:after{
+	display: block;
+	height: 3px;
+	width: 35px;
+	margin: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #333333;
+	opacity: 0.5;
+}
+
+.title-search-page{
+	font-size: 26px;
+	font-weight: 300;
+	width: 100%;
+	max-width: 100%;		
+	text-align: center;
+	display: inline-block;
+
+}
+
+.search-form{
+	position: relative;
+	display: table;
+	width: 100%;
+}
+
+.search-input{
+	display: table-cell;
+	height: 37px;
+	vertical-align: middle;
+	margin: 0;
+	border: 1px solid #b3b3b3;
+	max-width: 100%;
+	width: 100%;
+	padding: 8px 10px;
+	color: #333;
+	font-weight: 400;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px){
+	.search-bar{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.input-group-btn{
+	position: relative;
+	width: 1%;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+}
+
+.search-btn{
+	display: inline-block;
+	padding: 10px 10px;	
+	height: 37px;
+	width: auto;
+	line-height: 1;
+	margin: 0;
+	font-weight: 700;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer; 
+	border: none;
+	background-color: #000;
+	color: #fff;
+}
+
+.fallback-text{
+	display: none;
+}
+
+
+.search-result{
+    margin-top:50px;
+}
+
+.search-result-item{
+    box-sizing: border-box;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.search-result_img{
+    max-width:100%;
+    height:auto;
+}
+
+hr{
+    margin:25px;
+}
+
+.search-info{
+    height:80%;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.search-info a{
+    text-decoration: none;
+    font-size: 3em;
+    color:#333;
+}
+
+.search-info p{
+    font-size: 2em;
+    color:#333;
+}

@@ -20,22 +20,28 @@
     background: #333333;
     opacity: .5;
 }
-.gridViewItems {
-    margin-left: 250px;
-    display: flex;
-    width: 262px;
+
+.gridViewItem {
+    text-align:center;
 }
-.omoriImg {
+
+.collection_IMG {
     position: relative;
     display: block;
-    margin: auto;
+    margin: 0 auto 10px;
     z-index: -1000;
 }
+
+.collection-photo{
+    max-height:500px;
+    max-width:100%;
+    height:auto;
+}
+
 .gridSignature {
     position: relative;
     color: black;
     text-align: center;
-    /*right: 160px;*/
     display: block;
     text-decoration: none;
 }
@@ -47,6 +53,6 @@
     text-decoration: none;
     color: black;
 }
-.gridViewItem {
-    padding-right: 100px;
+.gridViewImg a {
+    z-index: 400;
 }
