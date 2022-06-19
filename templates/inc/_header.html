@@ -73,7 +73,9 @@
                             {% if user.is_authenticated %}
                                 {% for order in cart_orders %}
                                     {% for item in order.get_cart_items %}
-                                        <p>{{ item }}</p>
+                                        <div class="cartItem">
+                                            <p>{{ item }}</p>
+                                        </div>
                                     {% endfor %}
                                 {% endfor %}
                             {% endif %}

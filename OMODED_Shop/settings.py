@@ -117,7 +117,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'C:/Users/yauro/UWUDEAD_Shop/info2.log',
+            'filename': 'C:/Users/sllim/Desktop/UWUDEAD/UWUDEAD_production/info2.log',
         },
     },
     'loggers': {
