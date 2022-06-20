@@ -3,6 +3,11 @@
     padding: 0;
     font-family: Inconsolata, sans-serif;
 }
+.cartItem {
+    padding-top: 50px;
+    font-size: 26px;
+    font-weight: 600;
+}
 .nav li {
     margin-bottom: 10px;
     z-index:500;
@@ -11,6 +16,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .logo {
@@ -108,17 +114,17 @@
     z-index: 600;
 }
 
-#sidebarSearch.active::after {
-    content:'';
-    display: block;
-    position:relative;
-    top: -150px;
-    left: -1160px;
-    width:1160px;
-    height:1016px;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: -100;
-}
+/*#sidebarSearch.active::after {*/
+/*    content:'';*/
+/*    display: block;*/
+/*    position:relative;*/
+/*    top: -150px;*/
+/*    left: -1160px;*/
+/*    width:1160px;*/
+/*    height:1016px;*/
+/*    background-color: rgba(0, 0, 0, .5);*/
+/*    z-index: -100;*/
+/*}*/
 
 #sidebarSearch ul li:first-child {
     font-size: 26px;
@@ -240,17 +246,17 @@
     right: 0px;
     z-index: 600;
 }
-#sidebarUser.active::after {
-    content:'';
-    display: block;
-    position:relative;
-    top: -250px;
-    left: -1160px;
-    width:1160px;
-    height:1016px;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: -100;
-}
+/*#sidebarUser.active::after {*/
+/*    content:'';*/
+/*    display: block;*/
+/*    position:relative;*/
+/*    top: -250px;*/
+/*    left: -1160px;*/
+/*    width:1160px;*/
+/*    height:1016px;*/
+/*    background-color: rgba(0, 0, 0, .5);*/
+/*    z-index: -100;*/
+/*}*/
 #sidebarUser ul li:first-child {
     font-size: 26px;
     font-weight: 300;
@@ -383,17 +389,17 @@
     right: 0px;
     z-index: 600;
 }
-#sidebarCart.active::after {
-    content:'';
-    display: block;
-    position:relative;
-    top: -60px;
-    left: -1160px;
-    width:1160px;
-    height:1016px;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: -100;
-}
+/*#sidebarCart.active::after {*/
+/*    content:'';*/
+/*    display: block;*/
+/*    position:relative;*/
+/*    top: -60px;*/
+/*    left: -1160px;*/
+/*    width:1160px;*/
+/*    height:1016px;*/
+/*    background-color: rgba(0, 0, 0, .5);*/
+/*    z-index: -100;*/
+/*}*/
 #sidebarCart ul li:first-child {
     font-size: 26px;
     font-weight: 300;
