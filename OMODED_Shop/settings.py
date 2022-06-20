@@ -110,25 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': 'C:/Users/sllim/Desktop/UWUDEAD/UWUDEAD_production/info2.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-    },
-}
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
