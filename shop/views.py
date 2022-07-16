@@ -96,9 +96,6 @@ def register_request(request):
 class LoginRequest(LoginView):
     form_class = LoginForm
 
-    def get_default_redirect_url(self):
-        return self.request.META.get('HTTP_REFERER', '/')
-
 
 class ResetRequest(PasswordResetView):
     form_class = ResetForm
