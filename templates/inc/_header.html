@@ -28,11 +28,11 @@
                         </ul>
                     </div>
                     {% if user.is_authenticated %}
-                        <div class="toggle-btnUser" onclick="window.location.href = '/account/profile/'">
+                        <div class="toggle-btnUser" onclick="window.location.href = '{% url 'products:profile' %}'">
                             <li class="user-icon"></li>
                         </div>
                     {% else %}
-                        <div class="toggle-btnUser" onclick="window.location.href = '/account/login/'">
+                        <div class="toggle-btnUser" onclick="window.location.href = '{% url 'products:login' %}?next={% firstof request.path '/' %}'">
                             <li class="user-icon"></li>
                         </div>
 {#                        <div class="toggle-btnUser" onclick="openMenuUser()">#}
@@ -178,7 +178,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/showcase">
+                    <a class="nav-link" href="/">
                         <div>
                             <span>SHOWCASE</span>
                             <span class="icon-dropdown">
@@ -199,7 +199,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/info">
+                    <a class="nav-link" href="/">
                         <div>
                             <span>INFO</span>
                             <span class="icon-dropdown">

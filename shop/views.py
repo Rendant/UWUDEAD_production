@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import *
 from django.views.generic import ListView, DetailView
 from django.template.loader import render_to_string
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from .forms import NewUserForm, LoginForm, ResetForm
 from django.contrib.auth import login
 from django.contrib.auth.views import LoginView, PasswordResetView
