@@ -107,11 +107,13 @@
 .toggle-btnSearch {
     position: relative;
     top: 60px;
+    z-index: 500;
 }
 
 #sidebarSearch.active {
     right: 0px;
     z-index: 600;
+    overflow-y: scroll;
 }
 
 /*#sidebarSearch.active::after {*/
